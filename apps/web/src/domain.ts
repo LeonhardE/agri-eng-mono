@@ -1,6 +1,22 @@
 export type Category = 'all' | 'tractor' | 'harvester' | 'implement' | 'drone';
 export type TradeMode = 'all' | 'rent' | 'buy';
 export type SortOrder = 'recommended' | 'price-asc' | 'price-desc' | 'newest';
+export type ContentLanguage = 'zh-CN' | 'ug-CN' | 'kk-Arab-CN';
+export type ReviewDecision = 'approved' | 'rejected';
+
+export interface ReviewEvent {
+  decision: ReviewDecision;
+  note: string;
+  reviewedAt: string;
+  reviewer: string;
+  revision: number;
+}
+
+export interface Moderation {
+  status: 'pending_review' | ReviewDecision;
+  submittedAt: string;
+  history: ReviewEvent[];
+}
 
 /** Demo amounts are whole Chinese yuan, not payment-provider minor units. */
 export interface Listing {
@@ -21,6 +37,9 @@ export interface Listing {
   description: string;
   specs?: Record<string, string>;
   createdAt: string;
+  contentLanguage?: ContentLanguage;
+  revision?: number;
+  moderation?: Moderation;
 }
 
 export interface ListingFilters {
@@ -212,6 +231,130 @@ export const seedListings: Listing[] = [
   },
 ];
 
+const contentLanguages: readonly string[] = ['zh-CN', 'ug-CN', 'kk-Arab-CN'];
+
+/** Demo-only state transition. Production authorization belongs on the server. */
+export function submitListing(
+  listing: Listing,
+  language: ContentLanguage,
+  now = new Date(),
+): Listing {
+  if (!isListing(listing) || !contentLanguages.includes(language)) {
+    throw new Error('设备信息无效，请刷新后重试');
+  }
+  return {
+    ...listing,
+    contentLanguage: language,
+    revision: (listing.revision ?? 0) + 1,
+    moderation: {
+      status: 'pending_review',
+      submittedAt: now.toISOString(),
+      history: listing.moderation?.history ?? [],
+    },
+  };
+}
+
+export function reviewListing(
+  listing: Listing,
+  decision: ReviewDecision,
+  note: string,
+  now = new Date(),
+): Listing {
+  if (!isListing(listing) || listing.moderation?.status !== 'pending_review') {
+    throw new Error('仅可审核待审信息，请刷新队列');
+  }
+  if (decision !== 'approved' && decision !== 'rejected') throw new Error('审核操作无效');
+  const reason = note.trim();
+  if (reason.length > 1000) throw new Error('审核备注不能超过 1000 字');
+  if (decision === 'rejected' && !reason) throw new Error('请填写退回原因，方便发布者修改');
+  const event: ReviewEvent = {
+    decision,
+    note: reason,
+    reviewedAt: now.toISOString(),
+    reviewer: '演示审核员',
+    revision: listing.revision!,
+  };
+  return {
+    ...listing,
+    moderation: {
+      ...listing.moderation,
+      status: decision,
+      history: [...listing.moderation.history, event],
+    },
+  };
+}
+
+function hasCurrentApproval(listing: Listing): boolean {
+  const latest = listing.moderation?.history.at(-1);
+  return (
+    listing.moderation?.status === 'approved' &&
+    latest?.decision === 'approved' &&
+    latest.revision === listing.revision
+  );
+}
+
+/** All discovery surfaces use this list, including saved-item results. */
+export function publicListings(localListings: readonly Listing[]): Listing[] {
+  const seedIds = new Set(seedListings.map(({ id }) => id));
+  return [
+    ...uniqueById(
+      localListings.filter((listing) => !seedIds.has(listing.id) && hasCurrentApproval(listing)),
+    ),
+    ...seedListings,
+  ];
+}
+
+/** Fictional submissions loaded only when the reviewer asks to try the queue. */
+export function makeReviewSamples(now = new Date()): Listing[] {
+  const samples: {
+    language: ContentLanguage;
+    title: string;
+    subtitle: string;
+    description: string;
+  }[] = [
+    {
+      language: 'zh-CN',
+      title: '东方红 LX904 拖拉机',
+      subtitle: '新疆演示供给 · 出租信息待人工核验',
+      description:
+        '虚构审核样例：90 马力拖拉机出租。请核对机况、价格、交接方式与图片，专业团队确认后才能公开。',
+    },
+    {
+      language: 'ug-CN',
+      title: 'LX904 تىراكتور ئىجارە',
+      subtitle: '90 ئات كۈچى · كۆرگەزمە ئۇچۇرى',
+      description:
+        'بۇ پەقەت كۆرگەزمە ئۇچۇرى. ئۈسكۈنىنىڭ ئەھۋالى ۋە ئىجارە شەرتلىرىنى تەكشۈرۈش كېرەك.',
+    },
+    {
+      language: 'kk-Arab-CN',
+      title: 'LX904 تراكتور ساتىلادى',
+      subtitle: '90 ات كۇشى · ۇلگى حابارلانۋ',
+      description: 'بۇل تەك ۇلگى حابارلانۋ. تەحنيكانىڭ جاعدايى مەن باعاسىن تەكسەرۋ كەرەك.',
+    },
+  ];
+  return samples.map((sample, index) =>
+    submitListing(
+      {
+        ...seedListings[6]!,
+        id: `review-sample-${sample.language}`,
+        title: sample.title,
+        subtitle: sample.subtitle,
+        description: sample.description,
+        farm: '新疆示例农场',
+        location: '新疆 · 伊犁',
+        mode: index === 2 ? 'buy' : 'rent',
+        price: index === 2 ? 56000 : 520,
+        verified: false,
+        tag: '审核演示样例',
+        createdAt: now.toISOString(),
+      },
+      sample.language,
+      now,
+    ),
+  );
+}
+
 export function filterListings(listings: readonly Listing[], filters: ListingFilters): Listing[] {
   const query = filters.query.trim().toLocaleLowerCase('zh-CN');
   const location = filters.location?.trim();
@@ -260,6 +403,37 @@ function isText(value: unknown, max = 500): value is string {
   return typeof value === 'string' && value.trim().length > 0 && value.length <= max;
 }
 
+function isModeration(value: unknown, revision: unknown): value is Moderation {
+  if (!isRecord(value) || !Number.isSafeInteger(revision) || (revision as number) < 1) return false;
+  if (
+    !['pending_review', 'approved', 'rejected'].includes(String(value.status)) ||
+    typeof value.submittedAt !== 'string' ||
+    !Number.isFinite(Date.parse(value.submittedAt)) ||
+    !Array.isArray(value.history)
+  )
+    return false;
+  if (
+    !value.history.every(
+      (event) =>
+        isRecord(event) &&
+        (event.decision === 'approved' || event.decision === 'rejected') &&
+        typeof event.note === 'string' &&
+        event.note.length <= 1000 &&
+        (event.decision !== 'rejected' || event.note.trim().length > 0) &&
+        isText(event.reviewer, 80) &&
+        typeof event.reviewedAt === 'string' &&
+        Number.isFinite(Date.parse(event.reviewedAt)) &&
+        Number.isSafeInteger(event.revision) &&
+        (event.revision as number) >= 1 &&
+        (event.revision as number) <= (revision as number),
+    )
+  )
+    return false;
+  if (value.status === 'pending_review') return true;
+  const latest = value.history.at(-1);
+  return latest?.decision === value.status && latest?.revision === revision;
+}
+
 const categories: readonly string[] = ['tractor', 'harvester', 'implement', 'drone'];
 
 /** Browser storage is untrusted: validate every item before using it as a listing. */
@@ -290,6 +464,11 @@ export function isListing(value: unknown): value is Listing {
     /^\/images\/[a-z0-9-]+\.webp$/.test(value.image) &&
     (value.tag === undefined || isText(value.tag, 40)) &&
     isText(value.description, 2000) &&
+    (value.contentLanguage === undefined ||
+      contentLanguages.includes(String(value.contentLanguage))) &&
+    (value.revision === undefined ||
+      (Number.isSafeInteger(value.revision) && (value.revision as number) >= 1)) &&
+    (value.moderation === undefined || isModeration(value.moderation, value.revision)) &&
     (value.specs === undefined ||
       (isRecord(value.specs) &&
         Object.entries(value.specs).every(
@@ -302,6 +481,10 @@ export function isListing(value: unknown): value is Listing {
 
 export function createBooking(listing: Listing, input: BookingInput, now = new Date()): Booking {
   if (!isListing(listing)) throw new Error('设备信息无效，请刷新后重试');
+  const isFixture = !listing.moderation && seedListings.some(({ id }) => id === listing.id);
+  if (!isFixture && !hasCurrentApproval(listing)) {
+    throw new Error('设备尚未通过人工审核，暂不能提交交易意向');
+  }
   if (!isText(input.contactName, 40)) throw new Error('请填写联系人姓名（最多 40 字）');
   const phone = input.contactPhone.trim();
   if (!/^1[3-9]\d{9}$/.test(phone)) throw new Error('请填写有效的中国大陆手机号');
@@ -369,7 +552,17 @@ export function parsePersistedState(raw: string | null): PersistedState {
           )
         : [],
       listings: Array.isArray(value.listings)
-        ? uniqueById(value.listings.filter(isListing)).slice(0, 1000)
+        ? uniqueById(value.listings.filter(isListing))
+            .slice(0, 1000)
+            .map((listing) =>
+              listing.moderation
+                ? listing
+                : submitListing(
+                    listing,
+                    listing.contentLanguage ?? 'zh-CN',
+                    new Date(listing.createdAt),
+                  ),
+            )
         : [],
       bookings: Array.isArray(value.bookings)
         ? uniqueById(value.bookings.filter(isBooking)).slice(0, 1000)

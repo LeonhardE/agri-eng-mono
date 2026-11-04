@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-11-04-demo-v2",
+  "terms": [
+    {
+      "id": "tractor",
+      "messageId": "message.002",
+      "source": "拖拉机",
+      "meaning": "A self-propelled agricultural tractor. Preserve brand and model names.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "harvester",
+      "messageId": "message.003",
+      "source": "收获机械",
+      "meaning": "Agricultural harvesting equipment, not the harvest itself.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "implement",
+      "messageId": "message.004",
+      "source": "耕种农具",
+      "meaning": "Implements for soil cultivation and seeding.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "drone",
+      "messageId": "message.005",
+      "source": "植保无人机",
+      "meaning": "Agricultural uncrewed aircraft used for crop protection; not a guarantee of flight qualification.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "rotary-tiller",
+      "messageId": "message.221",
+      "source": "旋耕机",
+      "meaning": "PTO-driven rotary soil cultivation implement.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "seeder",
+      "messageId": "message.222",
+      "source": "播种机",
+      "meaning": "A seed-placement agricultural implement.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "horsepower",
+      "messageId": "message.223",
+      "source": "马力",
+      "meaning": "Power unit. Never change the numeric value or silently substitute kW.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "working-width",
+      "messageId": "message.262",
+      "source": "作业幅宽",
+      "meaning": "Effective working width, with the original numerical value and unit.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "rental",
+      "messageId": "message.022",
+      "source": "租赁",
+      "meaning": "Rental of equipment; no transfer of ownership.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "purchase",
+      "messageId": "message.023",
+      "source": "购买",
+      "meaning": "Purchase of equipment; distinct from rental.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    },
+    {
+      "id": "deposit",
+      "messageId": "message.050",
+      "source": "运输、押金、保险及配套作业另行协商，未计入此金额。",
+      "meaning": "Quoted demo amount excludes transport, deposit, insurance and operated services. Do not imply those costs are included.",
+      "risk": "agricultural-or-transaction-meaning",
+      "reviewStatus": "draft",
+      "reviewer": null,
+      "evidence": null,
+      "approvedAt": null
+    }
+  ]
+}

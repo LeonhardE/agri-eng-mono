@@ -1,0 +1,4939 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-11-04-demo-v2",
+  "description": "Demo drafts. Professional language and agricultural terminology review is required before a production release. Keep message IDs stable when changing wording.",
+  "messages": [
+    {
+      "id": "message.001",
+      "zh": "全部农机",
+      "ug": "بارلىق دېھقانچىلىق ماشىنىلىرى",
+      "kk": "بارلىق اۋىل شارۋاشىلىعى تەحنيكاسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.002",
+      "zh": "拖拉机",
+      "ug": "تىراكتور",
+      "kk": "تراكتور",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.003",
+      "zh": "收获机械",
+      "ug": "ھوسۇل يىغىش ماشىنىلىرى",
+      "kk": "وراق تەحنيكاسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.004",
+      "zh": "耕种农具",
+      "ug": "يەر ھەيدەش ۋە تېرىش سايمانلىرى",
+      "kk": "جەر وڭدەۋ جانە ەگىس قۇرالدارى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.005",
+      "zh": "植保无人机",
+      "ug": "زىرائەت قوغداش ئۇچقۇچىسىز ئايروپىلانى",
+      "kk": "ەگىندى قورعاۋعا ارنالعان ۇشقىشسىز ۇشۋ اپپاراتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.006",
+      "zh": "HEJI · 农机共享集市",
+      "ug": "HEJI · دېھقانچىلىق ماشىنىلىرى بازىرى",
+      "kk": "HEJI · اۋىل شارۋاشىلىعى تەحنيكاسى بازارى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.007",
+      "zh": "关闭弹窗",
+      "ug": "كۆزنەكنى تاقاش",
+      "kk": "تەرەزەنى جابۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.008",
+      "zh": "可租赁",
+      "ug": "ئىجارىگە بېرىلىدۇ",
+      "kk": "جالعە بەرلەدى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.009",
+      "zh": "二手出售",
+      "ug": "ئىشلىتىلگەن ماشىنا سېتىلىدۇ",
+      "kk": "قولدانىلعان تەحنيكا ساتىلادى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.010",
+      "zh": "取消收藏",
+      "ug": "ساقلىۋېلىشنى بىكار قىلىش",
+      "kk": "ساقتاعانداردان الىپ تاستاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.011",
+      "zh": "收藏",
+      "ug": "ساقلىۋېلىش",
+      "kk": "ساقتاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.012",
+      "zh": "示意图片",
+      "ug": "ئۈلگە سۈرەت",
+      "kk": "ۇلگىلىك سۋرەت",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.013",
+      "zh": "年",
+      "ug": "يىل",
+      "kk": "جىل",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.014",
+      "zh": "小时",
+      "ug": "سائەت",
+      "kk": "ساعات",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.015",
+      "zh": "/ 天",
+      "ug": "/ كۈن",
+      "kk": "/ كۇن",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.016",
+      "zh": "售价",
+      "ug": "سېتىش باھاسى",
+      "kk": "ساتۋ باعاسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.017",
+      "zh": "演示认证农场",
+      "ug": "ئۈلگە تەستىقلانغان دېھقانچىلىق مەيدانى",
+      "kk": "ۇلگىلىك راسستالعان شارۋاشىلىق",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.018",
+      "zh": "请检查填写的信息",
+      "ug": "كىرگۈزگەن ئۇچۇرلارنى تەكشۈرۈڭ",
+      "kk": "ەنگىزىلگەن اقپاراتتى تەكسەرىڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.019",
+      "zh": "意向已保存",
+      "ug": "ئىلتىماس ساقلاندى",
+      "kk": "وتىنىش ساقتالتدى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.020",
+      "zh": "离下一次丰收，又近了一步。",
+      "ug": "كېيىنكى مول ھوسۇلغا يەنە بىر قەدەم يېقىنلاشتۇق.",
+      "kk": "كەلەسى مول ونىمگە تاعى بىر قادام جاقىندادىق.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.021",
+      "zh": "可在「我的农场」查看本次",
+      "ug": "«مېنىڭ دېھقانچىلىق مەيدانىم»دا كۆرۈڭ:",
+      "kk": "«مەنىڭ شارۋاشىلىعىم» بولىمىنەن قاراڭ:",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.022",
+      "zh": "租赁",
+      "ug": "ئىجارە",
+      "kk": "جالعە الۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.023",
+      "zh": "购买",
+      "ug": "سېتىۋېلىش",
+      "kk": "ساتىپ الۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.024",
+      "zh": "意向。",
+      "ug": "ئىلتىماسى.",
+      "kk": "وتىنىشى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.025",
+      "zh": "这是本地演示，尚未通知农场，也不会产生扣款。",
+      "ug": "بۇ پەقەت يەرلىك ئۈلگە. دېھقانچىلىق مەيدانىغا ئۇقتۇرۇش ئەۋەتىلمەيدۇ، پۇل تۇتۇلمايدۇ.",
+      "kk": "بۇل جەرگىلىك دەمونستراسيە. شارۋاشىلىققا حابار جىبەرىلمەيدى، اقشا الىنبايدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.026",
+      "zh": "继续逛逛",
+      "ug": "داۋاملىق كۆرۈش",
+      "kk": "قاراپ شىعۋدى جالعاستىرۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.027",
+      "zh": "农机示意图片，与实际型号无关",
+      "ug": "ماشىنا ئۈلگە سۈرىتى، ھەقىقىي مودېلغا ۋەكىللىك قىلمايدۇ",
+      "kk": "تەحنيكانىڭ ۇلگىلىك سۋرەتى، ناقتى مودەلگە قاتىسى جوق",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.028",
+      "zh": "灵活租赁",
+      "ug": "جانلىق ئىجارە",
+      "kk": "ىيكەمدى جالعە الۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.029",
+      "zh": "图片及参数均为演示",
+      "ug": "سۈرەت ۋە پارامېتىرلار ئۈلگە",
+      "kk": "سۋرەت پەن پارامەترلەر ۇلگى رەتىندە",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.030",
+      "zh": "关于这台设备",
+      "ug": "بۇ ماشىنا ھەققىدە",
+      "kk": "بۇل تەحنيكا تۋرالى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.031",
+      "zh": "出厂年份",
+      "ug": "ئىشلەپچىقىرىلغان يىلى",
+      "kk": "شىعارىلعان جىلى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.032",
+      "zh": "使用时长",
+      "ug": "ئىشلىتىلگەن ۋاقتى",
+      "kk": "پايدالانىلعان ۋاقىتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.033",
+      "zh": "动力 / 规格",
+      "ug": "قۇۋۋەت / ئۆلچەم",
+      "kk": "قۋات / سيپاتتاما",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.034",
+      "zh": "示例认证农场 · 资料仅供演示",
+      "ug": "ئۈلگە تەستىقلانغان مەيدان · ئۇچۇرلار پەقەت ئۈلگە",
+      "kk": "ۇلگىلىك راسستالعان شارۋاشىلىق · اقپارات دەمونستراسيەعا ارنالعان",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.035",
+      "zh": "示例农场 · 尚未认证",
+      "ug": "ئۈلگە مەيدان · تېخى تەستىقلانمىغان",
+      "kk": "ۇلگىلىك شارۋاشىلىق · الى راسستالماعان",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.036",
+      "zh": "收藏设备",
+      "ug": "ماشىنىنى ساقلىۋېلىش",
+      "kk": "تەحنيكانى ساقتاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.037",
+      "zh": "给农忙，搭把手",
+      "ug": "ئالدىراش دېھقانچىلىققا ياردەم",
+      "kk": "قىزۋ ناۋقانعا كومەك",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.038",
+      "zh": "为农场，添好帮手",
+      "ug": "مەيدانغا ياخشى ياردەمچى",
+      "kk": "شارۋاشىلىققا جاقسى كومەكشى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.039",
+      "zh": "参考售价",
+      "ug": "پايدىلىنىش سېتىش باھاسى",
+      "kk": "باعدارلىق ساتۋ باعاسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.040",
+      "zh": "按自然日计费，起止日期均计入租期。",
+      "ug": "كۈن بويىچە ھېسابلىنىدۇ. باشلانغان ۋە ئاخىرلاشقان كۈنمۇ ھېسابلىنىدۇ.",
+      "kk": "كۇنتىزبەلىك كۇنمەن ەسەپتەلەدى. باستالۋ جانە اياقتالۋ كۇندەرى دە قوسىلادى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.041",
+      "zh": "提交购买意向，演示中不发生真实交易。",
+      "ug": "سېتىۋېلىش ئىلتىماسىنى يوللاڭ. ئۈلگىدە ھەقىقىي سودا بولمايدۇ.",
+      "kk": "ساتىپ الۋ وتىنىشىن جىبەرىڭىز. دەمودا ناقتى ساۋدا بولمايدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.042",
+      "zh": "开始日期",
+      "ug": "باشلىنىش ۋاقتى",
+      "kk": "باستالۋ كۇنى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.043",
+      "zh": "结束日期",
+      "ug": "ئاخىرلىشىش ۋاقتى",
+      "kk": "اياقتالۋ كۇنى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.044",
+      "zh": "联系人",
+      "ug": "ئالاقىلاشقۇچى",
+      "kk": "بايلانىسۋشى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.045",
+      "zh": "请输入演示姓名",
+      "ug": "ئۈلگە ئىسىم كىرگۈزۈڭ",
+      "kk": "ۇلگىلىك ەسىم ەنگىزىڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.046",
+      "zh": "联系手机",
+      "ug": "يانفون نومۇرى",
+      "kk": "بايلانىس تەلەفونى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.047",
+      "zh": "例如 13800000000",
+      "ug": "مەسىلەن 13800000000",
+      "kk": "مىسالى 13800000000",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.048",
+      "zh": "设备参考价",
+      "ug": "ماشىنىنىڭ پايدىلىنىش باھاسى",
+      "kk": "تەحنيكانىڭ باعدارلىق باعاسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.049",
+      "zh": "请选择有效租期",
+      "ug": "توغرا ئىجارە مۇددىتىنى تاللاڭ",
+      "kk": "جارامدى جالعە مەرزىمىن تاڭداڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.050",
+      "zh": "运输、押金、保险及配套作业另行协商，未计入此金额。",
+      "ug": "توشۇش، كاپالەت پۇلى، سۇغۇرتا ۋە مۇلازىمەت ئايرىم كېڭىشىلىدۇ، بۇ پۇلغا كىرمەيدۇ.",
+      "kk": "تاسىمال، كەپىلاقى، ساقتاندىرۋ جانە قوسىمشا جۇمىس بولەك كەلىسىلەدى، بۇل سوماعا كىرمەيدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.051",
+      "zh": "提交",
+      "ug": "يوللاش",
+      "kk": "جىبەرۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.052",
+      "zh": "意向",
+      "ug": "ئىلتىماس",
+      "kk": "وتىنىش",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.053",
+      "zh": "仅保存在当前浏览器。请使用虚构联系信息。",
+      "ug": "پەقەت ھازىرقى توركۆرگۈچتە ساقلىنىدۇ. ئويدۇرما ئالاقە ئۇچۇرى ئىشلىتىڭ.",
+      "kk": "تەك وسى براۋزەردە ساقتالىدى. ويدانعان بايلانىس اقپاراتىن قولدانىڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.054",
+      "zh": "我的演示农场",
+      "ug": "مېنىڭ ئۈلگە دېھقانچىلىق مەيدانىم",
+      "kk": "مەنىڭ ۇلگىلىك شارۋاشىلىعىم",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.055",
+      "zh": "新鲜上架",
+      "ug": "يېڭى قوشۇلدى",
+      "kk": "جاڭادان قوسىلدى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.056",
+      "zh": "请完整填写设备信息，价格需为正整数。",
+      "ug": "ماشىنا ئۇچۇرىنى تولۇق تولدۇرۇڭ، باھا مۇسبەت پۈتۈن سان بولسۇن.",
+      "kk": "تەحنيكا اقپاراتىن تولىق تولتىرىڭىز، باعا وڭ پۇتىن سان بولۋى كەرەك.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.057",
+      "zh": "让闲置农机，忙起来。",
+      "ug": "بىكار تۇرغان ماشىنىنى ئىشقا سېلىڭ.",
+      "kk": "بوس تۇرعان تەحنيكانى جۇمىسقا قوسىڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.058",
+      "zh": "发布到本地演示集市，试着为好设备找个新去处。",
+      "ug": "ئۈلگە بازىرىغا يوللاڭ. قولدا تەكشۈرۈشتىن كېيىن كۆرۈنىدۇ.",
+      "kk": "ۇلگىلىك بازارعا جىبەرىڭىز. قولمەن تەكسەرۋدەن كەيىن كورىنەدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.059",
+      "zh": "我要出租",
+      "ug": "ئىجارىگە بېرىمەن",
+      "kk": "جالعە بەرەمىن",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.060",
+      "zh": "我要出售",
+      "ug": "ساتىمەن",
+      "kk": "ساتامىن",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.061",
+      "zh": "设备名称",
+      "ug": "ماشىنا نامى",
+      "kk": "تەحنيكا اتاۋى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.062",
+      "zh": "例如：东方红 LX904 拖拉机",
+      "ug": "مەسىلەن: LX904 تىراكتور",
+      "kk": "مىسالى: LX904 تراكتور",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.063",
+      "zh": "设备分类",
+      "ug": "ماشىنا تۈرى",
+      "kk": "تەحنيكا ساناتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.064",
+      "zh": "日租金（元 / 天）",
+      "ug": "كۈنلۈك ئىجارە ھەققى (يۈەن / كۈن)",
+      "kk": "كۇندىك جالعە اقىسى (يۋان / كۇن)",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.065",
+      "zh": "出售价格（元）",
+      "ug": "سېتىش باھاسى (يۈەن)",
+      "kk": "ساتۋ باعاسى (يۋان)",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.066",
+      "zh": "例如 500",
+      "ug": "مەسىلەن 500",
+      "kk": "مىسالى 500",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.067",
+      "zh": "例如 50000",
+      "ug": "مەسىلەن 50000",
+      "kk": "مىسالى 50000",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.068",
+      "zh": "所在地区",
+      "ug": "رايون",
+      "kk": "ورنالاسقان وڭىرى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.069",
+      "zh": "例如：山东 · 潍坊",
+      "ug": "مەسىلەن: شىنجاڭ · ئىلى",
+      "kk": "مىسالى: شىنجاڭ · ىلە",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.070",
+      "zh": "例如：90 马力",
+      "ug": "مەسىلەن: 90 ئات كۈچى",
+      "kk": "مىسالى: 90 ات كۇشى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.071",
+      "zh": "使用小时",
+      "ug": "ئىشلىگەن سائەت",
+      "kk": "جۇمىس ساعاتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.072",
+      "zh": "一句话亮点",
+      "ug": "قىسقا ئالاھىدىلىك",
+      "kk": "قىسقاشا ەرەكشەلىگى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.073",
+      "zh": "例如：四轮驱动 · 保养记录齐全",
+      "ug": "مەسىلەن: تۆت چاق قوزغىلىدۇ · ئاسراش خاتىرىسى تولۇق",
+      "kk": "مىسالى: تورت دۇڭگەلەگى جەتەكشى · كۇتىم جازباسى بار",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.074",
+      "zh": "设备介绍",
+      "ug": "ماشىنا تونۇشتۇرۇشى",
+      "kk": "تەحنيكا سيپاتتاماسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.075",
+      "zh": "介绍设备状态、适用作业和交接方式……",
+      "ug": "ماشىنا ھالىتى، ئىشلىتىش دائىرىسى ۋە تاپشۇرۇش ئۇسۇلىنى يېزىڭ…",
+      "kk": "تەحنيكانىڭ كۇيىن، جۇمىس تۈرىن جانە تاپسىرۋ تاسىلىن جازىڭىز…",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.076",
+      "zh": "按设备分类匹配的演示图",
+      "ug": "ماشىنا تۈرىگە ماس ئۈلگە سۈرەت",
+      "kk": "تەحنيكا ساناتىنا ساي ۇلگىلىك سۋرەت",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.077",
+      "zh": "自动匹配分类示意图",
+      "ug": "تۈرگە ماس ئۈلگە سۈرەت",
+      "kk": "ساناتقا ساي ۇلگىلىك سۋرەت",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.078",
+      "zh": "真实照片上传留待后端接入。",
+      "ug": "ھەقىقىي سۈرەت يوللاش كېيىن قوشۇلىدۇ.",
+      "kk": "ناقتى سۋرەت جۇكتەۋ كەيىن قوسىلادى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.079",
+      "zh": "发布到演示集市",
+      "ug": "قولدا تەكشۈرۈشكە يوللاش",
+      "kk": "قولمەن تەكسەرۋگە جىبەرۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.080",
+      "zh": "仅在本机可见，不会同步给其他用户。",
+      "ug": "پەقەت بۇ توركۆرگۈچتە كۆرۈنىدۇ، باشقىلارغا ماسقەدەملەنمەيدۇ.",
+      "kk": "تەك وسى قۇرىلعىدا كورىنەدى، باسقا ادامدارعا تاراتىلمايدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.081",
+      "zh": "已取消收藏",
+      "ug": "ساقلاش بىكار قىلىندى",
+      "kk": "ساقتاعانداردان الىندى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.082",
+      "zh": "已收藏，可在「我的收藏」查看",
+      "ug": "ساقلاندى، «ساقلىۋالغانلىرىم»دا كۆرۈڭ",
+      "kk": "ساقتالتدى، «ساقتاعاندارىم» بولىمىنەن قاراڭ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.083",
+      "zh": "禾集首页",
+      "ug": "HEJI باش بەت",
+      "kk": "HEJI باستى بەتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.084",
+      "zh": "禾集",
+      "ug": "HEJI",
+      "kk": "HEJI",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.085",
+      "zh": "农机共享集市",
+      "ug": "دېھقانچىلىق ماشىنىلىرى بازىرى",
+      "kk": "اۋىل شارۋاشىلىعى تەحنيكاسى بازارى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.086",
+      "zh": "主导航",
+      "ug": "ئاساسىي يولباشچى",
+      "kk": "نەگىزگى شارلاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.087",
+      "zh": "农机集市",
+      "ug": "ماشىنا بازىرى",
+      "kk": "تەحنيكا بازارى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.088",
+      "zh": "我的收藏",
+      "ug": "ساقلىۋالغانلىرىم",
+      "kk": "ساقتاعاندارىم",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.089",
+      "zh": "我的农场",
+      "ug": "مېنىڭ مەيدانىم",
+      "kk": "مەنىڭ شارۋاشىلىعىم",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.090",
+      "zh": "发布农机",
+      "ug": "ماشىنا يوللاش",
+      "kk": "تەحنيكا جىبەرۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.091",
+      "zh": "查看我的演示农场",
+      "ug": "مېنىڭ ئۈلگە مەيدانىمنى كۆرۈش",
+      "kk": "مەنىڭ ۇلگىلىك شارۋاشىلىعىمدى قاراۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.092",
+      "zh": "让农机流转，让土地丰收",
+      "ug": "ماشىنا ئىشلىسۇن، يەر مول ھوسۇل بەرسۇن",
+      "kk": "تەحنيكا جۇمىس ىستەسىن، جەر مول ونىم بەرسىن",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.093",
+      "zh": "好农机，",
+      "ug": "ياخشى ماشىنا،",
+      "kk": "جاقسى تەحنيكا،",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.094",
+      "zh": "遇见",
+      "ug": "كېيىنكى",
+      "kk": "كەلەسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.095",
+      "zh": "下一片田。",
+      "ug": "ئېتىزدا ئۇچرىشايلى.",
+      "kk": "ەگىستىكپەن تاۋىسادى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.096",
+      "zh": "闲置的好设备，也能成为别人的好帮手。",
+      "ug": "بىكار تۇرغان ياخشى ماشىنا باشقىلارغا ياردەم بولىدۇ.",
+      "kk": "بوس تۇرعان جاقسى تەحنيكا باسقا ادامعا كومەكشى بولادى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.097",
+      "zh": "在禾集，连接农场，让买卖和租用更简单。",
+      "ug": "HEJI مەيدانلارنى باغلاپ، سېتىۋېلىش ۋە ئىجارىنى ئاسانلاشتۇرىدۇ.",
+      "kk": "HEJI شارۋاشىلىقتاردى بايلانىستىرىپ، ساتۋ مەن جالعە الۋدى جەڭىلدەتەدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.098",
+      "zh": "找一台趁手的农机",
+      "ug": "ماس ماشىنا ئىزدەش",
+      "kk": "ىڭعايلى تەحنيكا تابۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.099",
+      "zh": "台演示农机",
+      "ug": "ئۈلگە ماشىنا",
+      "kk": "ۇلگىلىك تەحنيكا",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.100",
+      "zh": "家示例农场",
+      "ug": "ئۈلگە مەيدان",
+      "kk": "ۇلگىلىك شارۋاشىلىق",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.101",
+      "zh": "租 / 售",
+      "ug": "ئىجارە / سېتىش",
+      "kk": "جالعە / ساتۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.102",
+      "zh": "按需灵活选择",
+      "ug": "ئېھتىياج بويىچە تاللاش",
+      "kk": "قاجەتتىلىككە ساي تاڭداۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.103",
+      "zh": "拖拉机在田野中作业的示意图片",
+      "ug": "ئېتىزدا ئىشلەۋاتقان تىراكتورنىڭ ئۈلگە سۈرىتى",
+      "kk": "ەگىستىكتە جۇمىس ىستەپ جاتقان تراكتوردىڭ ۇلگىلىك سۋرەتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.104",
+      "zh": "每台农机，都值得物尽其用。",
+      "ug": "ھەر بىر ماشىنا تولۇق ئىشلىتىلسۇن.",
+      "kk": "ار تەحنيكا تولىق پايدالانىلسىن.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.105",
+      "zh": "田野作业示意 · 非真实挂牌设备",
+      "ug": "ئېتىز ئىشلىرى ئۈلگىسى · ھەقىقىي سېتىلىدىغان ماشىنا ئەمەس",
+      "kk": "ەگىستىك جۇمىسىنىڭ ۇلگىسى · ساتۋداعى ناقتى تەحنيكا ەمەس",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.106",
+      "zh": "好设备，先收藏。",
+      "ug": "ياخشى ماشىنىنى ساقلىۋېلىڭ.",
+      "kk": "جاقسى تەحنيكانى ساقتاپ قويىڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.107",
+      "zh": "为下一次农忙，留住心动的好帮手。",
+      "ug": "كېيىنكى دېھقانچىلىق ئۈچۈن ياخشى ياردەمچىنى ساقلاڭ.",
+      "kk": "كەلەسى ناۋقانعا ۇناعان كومەكشىنى ساقتاڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.108",
+      "zh": "搜索农机、品牌或农场",
+      "ug": "ماشىنا، ماركا ياكى مەيدان ئىزدەش",
+      "kk": "تەحنيكا، ماركا نەمەسە شارۋاشىلىق ىزدەۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.109",
+      "zh": "搜农机、品牌，或你熟悉的农场",
+      "ug": "ماشىنا، ماركا ياكى مەيدان ئىزدەڭ",
+      "kk": "تەحنيكا، ماركا نەمەسە شارۋاشىلىق ىزدەڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.110",
+      "zh": "清空搜索",
+      "ug": "ئىزدەشنى تازىلاش",
+      "kk": "ىزدەۋدى تازالاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.111",
+      "zh": "选择地区",
+      "ug": "رايون تاللاش",
+      "kk": "وڭىردى تاڭداۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.112",
+      "zh": "全国地区",
+      "ug": "بارلىق رايونلار",
+      "kk": "بارلىق وڭىرلەر",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.113",
+      "zh": "搜索农机",
+      "ug": "ماشىنا ئىزدەش",
+      "kk": "تەحنيكا ىزدەۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.114",
+      "zh": "农机分类",
+      "ug": "ماشىنا تۈرلىرى",
+      "kk": "تەحنيكا ساناتتارى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.115",
+      "zh": "发现好农机",
+      "ug": "ياخشى ماشىنا تېپىڭ",
+      "kk": "جاقسى تەحنيكا تابىڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.116",
+      "zh": "台设备",
+      "ug": "ماشىنا",
+      "kk": "تەحنيكا",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.117",
+      "zh": "，总有一台适合你",
+      "ug": "، سىزگە ماس بىر ماشىنا بار",
+      "kk": "، سىزگە ساي تەحنيكا بار",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.118",
+      "zh": "交易方式",
+      "ug": "سودا ئۇسۇلى",
+      "kk": "ساۋدا تاسىلى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.119",
+      "zh": "全部",
+      "ug": "ھەممىسى",
+      "kk": "بارلىعى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.120",
+      "zh": "租农机",
+      "ug": "ماشىنا ئىجارە ئېلىش",
+      "kk": "تەحنيكا جالعە الۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.121",
+      "zh": "买农机",
+      "ug": "ماشىنا سېتىۋېلىش",
+      "kk": "تەحنيكا ساتىپ الۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.122",
+      "zh": "设备排序",
+      "ug": "ماشىنىلارنى رەتلەش",
+      "kk": "تەحنيكانى سۇرىپتاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.123",
+      "zh": "综合推荐",
+      "ug": "تەۋسىيە",
+      "kk": "ۇسىنىلعاندار",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.124",
+      "zh": "最新发布",
+      "ug": "ئەڭ يېڭى",
+      "kk": "ەڭ جاڭا",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.125",
+      "zh": "价格从低到高",
+      "ug": "باھا ئەرزاندىن قىممەتكە",
+      "kk": "باعا تومەننەن جوعارىعا",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.126",
+      "zh": "价格从高到低",
+      "ug": "باھا قىممەتتىن ئەرزانغا",
+      "kk": "باعا جوعارىدان تومەنگە",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.127",
+      "zh": "还没有收藏的设备",
+      "ug": "تېخى ماشىنا ساقلانمىدى",
+      "kk": "الى تەحنيكا ساقتالمادى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.128",
+      "zh": "暂时没有找到合适的农机",
+      "ug": "ھازىرچە ماس ماشىنا تېپىلمىدى",
+      "kk": "ازىرگە ساي تەحنيكا تابىلمادى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.129",
+      "zh": "点击设备上的爱心，把好帮手留在这里。",
+      "ug": "ماشىنا ئۈستىدىكى يۈرەك بەلگىسىنى بېسىپ ساقلاڭ.",
+      "kk": "تەحنيكاداعى جۇرەك بەلگىسىن باسىپ ساقتاڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.130",
+      "zh": "试试其他关键词，或放宽筛选条件。",
+      "ug": "باشقا سۆز بىلەن ئىزدەڭ ياكى سۈزگۈچنى ئۆزگەرتىڭ.",
+      "kk": "باسقا سوزبەن ىزدەڭىز نەمەسە سۇزگىنى وزگەرتىڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.131",
+      "zh": "去集市逛逛",
+      "ug": "بازارنى كۆرۈش",
+      "kk": "بازاردى قاراپ شىعۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.132",
+      "zh": "清除筛选条件",
+      "ug": "سۈزگۈچنى تازىلاش",
+      "kk": "سۇزگىنى تازالاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.133",
+      "zh": "租金与售价分开比较，选择租 / 售后可按价格排序。",
+      "ug": "ئىجارە بىلەن سېتىش باھاسى ئايرىم سېلىشتۇرۇلىدۇ. ئالدى بىلەن ئىجارە ياكى سېتىشنى تاللاڭ.",
+      "kk": "جالعە جانە ساتۋ باعاسى بولەك سالىستىرىلادى. الدىمەن جالعە نەمەسە ساتۋدى تاڭداڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.134",
+      "zh": "已展示全部匹配设备，试试其他分类发现更多。",
+      "ug": "ماس ماشىنىلار كۆرسىتىلدى، باشقا تۈرلەرنىمۇ كۆرۈڭ.",
+      "kk": "ساي تەحنيكا كورسەتىلدى، باسقا ساناتتاردى دا قاراڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.135",
+      "zh": "管理设备和交易意向，为下一季做好准备。",
+      "ug": "ماشىنا ۋە ئىلتىماسلارنى باشقۇرۇپ، كېيىنكى مەۋسۇمغا تەييارلىنىڭ.",
+      "kk": "تەحنيكا مەن وتىنىشتەردى باسقارىپ، كەلەسى ماۋسىمعا دايىندالىڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.136",
+      "zh": "我的发布",
+      "ug": "يوللىغانلىرىم",
+      "kk": "جىبەرگەندەرىم",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.137",
+      "zh": "交易意向",
+      "ug": "سودا ئىلتىماسى",
+      "kk": "ساۋدا وتىنىشتەرى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.138",
+      "zh": "已收藏设备",
+      "ug": "ساقلانغان ماشىنا",
+      "kk": "ساقتالعان تەحنيكا",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.139",
+      "zh": "我的交易意向",
+      "ug": "مېنىڭ سودا ئىلتىماسىم",
+      "kk": "مەنىڭ ساۋدا وتىنىشتەرىم",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.140",
+      "zh": "仅本地保存 · 尚未通知农场",
+      "ug": "پەقەت يەرلىك ساقلانغان · مەيدانغا ئۇقتۇرۇلمىغان",
+      "kk": "تەك جەرگىلىك ساقتالعان · شارۋاشىلىققا حابارلانباعان",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.141",
+      "zh": "购买意向 · 等待线下验机",
+      "ug": "سېتىۋېلىش ئىلتىماسى · ماشىنىنى كۆرۈشنى كۈتۈۋاتىدۇ",
+      "kk": "ساتىپ الۋ وتىنىشى · تەحنيكانى قاراۋدى كۇتۋدە",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.142",
+      "zh": "本地意向",
+      "ug": "يەرلىك ئىلتىماس",
+      "kk": "جەرگىلىك وتىنىش",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.143",
+      "zh": "本地意向已移除",
+      "ug": "يەرلىك ئىلتىماس ئۆچۈرۈلدى",
+      "kk": "جەرگىلىك وتىنىش الىندى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.144",
+      "zh": "下一次农忙，从这里开始",
+      "ug": "كېيىنكى دېھقانچىلىق مۇشۇ يەردىن باشلىنىدۇ",
+      "kk": "كەلەسى ناۋقان وسى جەردەن باستالادى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.145",
+      "zh": "找到心仪设备后，提交一份租赁或购买意向。",
+      "ug": "ماس ماشىنا تېپىلغاندا ئىجارە ياكى سېتىۋېلىش ئىلتىماسى يوللاڭ.",
+      "kk": "ۇناعان تەحنيكانى تاپقان سوڭ جالعە نەمەسە ساتىپ الۋ وتىنىشىن جىبەرىڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.146",
+      "zh": "去找好农机",
+      "ug": "ياخشى ماشىنا تېپىش",
+      "kk": "جاقسى تەحنيكا تابۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.147",
+      "zh": "我发布的农机",
+      "ug": "مەن يوللىغان ماشىنىلار",
+      "kk": "مەنىڭ جىبەرگەن تەحنيكام",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.148",
+      "zh": "让你的好设备，服务更多土地。",
+      "ug": "ياخشى ماشىنىڭىز كۆپرەك ئېتىزغا مۇلازىمەت قىلسۇن.",
+      "kk": "جاقسى تەحنيكاڭىز كوبىرەك جەرگە قىزمەت ەتسىن.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.149",
+      "zh": "从发布第一台闲置农机开始。",
+      "ug": "تۇنجى بىكار ماشىنىڭىزنى يوللاشتىن باشلاڭ.",
+      "kk": "العاشقى بوس تەحنيكاڭىزدى جىبەرۋدەن باستاڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.150",
+      "zh": "发布第一台",
+      "ug": "تۇنجى ماشىنىنى يوللاش",
+      "kk": "العاشقى تەحنيكانى جىبەرۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.151",
+      "zh": "农场直连，更近一步",
+      "ug": "مەيدانلار بىۋاسىتە باغلىنىدۇ",
+      "kk": "شارۋاشىلىقتار تىكەلەي بايلانىسادى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.152",
+      "zh": "让设备与需求，在田间相遇。",
+      "ug": "ماشىنا بىلەن ئېھتىياج ئېتىزدا ئۇچراشسۇن.",
+      "kk": "تەحنيكا مەن قاجەتتىلىك ەگىستىكتە تاۋىسسىن.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.153",
+      "zh": "设备信息，一目了然",
+      "ug": "ماشىنا ئۇچۇرى ئېنىق",
+      "kk": "تەحنيكا اقپاراتى انىق",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.154",
+      "zh": "年份、工时和规格，清楚再决定。",
+      "ug": "يىل، ئىش سائىتى ۋە ئۆلچەمنى بىلىپ تاللاڭ.",
+      "kk": "جىل، جۇمىس ساعاتى جانە سيپاتتامانى بىلىپ تاڭداڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.155",
+      "zh": "可租可买，刚刚好",
+      "ug": "ئىجارە ياكى سېتىۋېلىش، ئېھتىياجىڭىز بويىچە",
+      "kk": "جالعە نەمەسە ساتىپ الۋ، قاجەتتىلىككە ساي",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.156",
+      "zh": "按农时选设备，把投入用在刀刃上。",
+      "ug": "دېھقانچىلىق ۋاقتىغا ماس ماشىنا تاللاڭ.",
+      "kk": "ناۋقانعا ساي تەحنيكانى تاڭداڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.157",
+      "zh": "让好农机流转，让每一季丰收。",
+      "ug": "ياخشى ماشىنا ئىشلىسۇن، ھەر مەۋسۇم مول ھوسۇل بولسۇن.",
+      "kk": "جاقسى تەحنيكا جۇمىس ىستەسىن، ار ماۋسىم ونىمدى بولسىن.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.158",
+      "zh": "概念演示 · 全部数据均为虚构",
+      "ug": "ئۇقىم ئۈلگىسى · بارلىق ئۇچۇرلار ئويدۇرما",
+      "kk": "تۇجىرىمدامالىق دەمونستراسيە · بارلىق دەرەك ويدانعان",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.159",
+      "zh": "演示说明",
+      "ug": "ئۈلگە چۈشەندۈرۈشى",
+      "kk": "دەمو تۈسىندىرمەسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.160",
+      "zh": "重置演示",
+      "ug": "ئۈلگىنى ئەسلىگە قايتۇرۇش",
+      "kk": "دەمونى باستاپقى كۇيگە كەلتىرۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.161",
+      "zh": "当前浏览器无法保存数据，刷新后本次修改可能丢失。",
+      "ug": "توركۆرگۈچ ئۇچۇرنى ساقلىيالمىدى، يېڭىلىغاندا ئۆزگىرىش يوقىلىشى مۇمكىن.",
+      "kk": "براۋزەر دەرەكتەردى ساقتاي المادى، جاڭارتقاندا وزگەرىستەر جوعالۋى مۇمكىن.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.162",
+      "zh": "已送交人工审核，通过后才在集市展示",
+      "ug": "ماشىنا قولدا تەكشۈرۈشكە يوللاندى",
+      "kk": "تەحنيكا قولمەن تەكسەرۋگە جىبەرىلدى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.163",
+      "zh": "从一台好农机开始。",
+      "ug": "بىر ياخشى ماشىنىدىن باشلاڭ.",
+      "kk": "بىر جاقسى تەحنيكادان باستاڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.164",
+      "zh": "禾集是一个农机买卖与租赁平台的概念演示，连接有设备的农场与有需求的人。",
+      "ug": "HEJI ماشىنا سېتىش ۋە ئىجارە سۇپىسىنىڭ ئۇقىم ئۈلگىسى، مەيدانلارنى ئېھتىياجلىق كىشىلەر بىلەن باغلايدۇ.",
+      "kk": "HEJI تەحنيكا ساتۋ جانە جالعە الۋ پلاتفورماسىنىڭ ۇلگىسى، شارۋاشىلىقتاردى قاجەتى بار ادامدارمەن بايلانىستىرادى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.165",
+      "zh": "浏览、搜索、分类筛选、地区筛选与收藏。",
+      "ug": "كۆرۈش، ئىزدەش، تۈر ۋە رايون تاللاش، ساقلاش.",
+      "kk": "قاراۋ، ىزدەۋ، سانات جانە وڭىر بويىنشا سۇزۋ، ساقتاۋ.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.166",
+      "zh": "本地设备送审、人工审核与购买 / 租赁意向演示。",
+      "ug": "ماشىنىنى تەكشۈرۈشكە يوللاش، ئىجارە / سېتىۋېلىش ئىلتىماسى.",
+      "kk": "تەحنيكانى تەكسەرۋگە جىبەرۋ، ساتىپ الۋ / جالعە الۋ وتىنىشى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.167",
+      "zh": "租金按自然日计算，含起止当天。",
+      "ug": "ئىجارە ھەققى باشلىنىش ۋە ئاخىرلىشىش كۈنىنى ئۆز ئىچىگە ئالىدۇ.",
+      "kk": "جالعە اقىسىنا باستالۋ جانە اياقتالۋ كۇندەرى قوسىلادى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.168",
+      "zh": "设备图片来自 Unsplash，仅作分类示意，与品牌型号无关。所有农场、价格、参数与认证状态均为演示数据。",
+      "ug": "سۈرەتلەر Unsplash دىن، پەقەت ئۈلگە. ماركا ۋە مودېلغا ۋەكىللىك قىلمايدۇ. مەيدان، باھا، پارامېتىر ۋە تەستىق ھالىتى ھەممىسى ئۈلگە.",
+      "kk": "سۋرەتتەر Unsplash قورىنان، تەك ۇلگى. ماركا مەن مودەلگە قاتىسى جوق. شارۋاشىلىق، باعا، پارامەتر جانە راسستاۋ مارتەبەسى ۇلگىلىك.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.169",
+      "zh": "数据仅存于当前浏览器；没有真实登录、支付、消息通知或库存锁定。请勿填写真实个人信息。",
+      "ug": "ئۇچۇر پەقەت بۇ توركۆرگۈچتە. ھەقىقىي كىرىش، پۇل تۆلەش، ئۇقتۇرۇش ياكى زاپاس قۇلۇپلاش يوق. ھەقىقىي شەخسىي ئۇچۇر كىرگۈزمەڭ.",
+      "kk": "دەرەك تەك وسى براۋزەردە. ناقتى كىرۋ، تولەم، حابارلاما جانە قور بەكەتۋ جوق. ناقتى جەكە اقپارات ەنگىزبەڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.170",
+      "zh": "开始探索",
+      "ug": "كۆرۈشنى باشلاش",
+      "kk": "قاراۋدى باستاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.171",
+      "zh": "重新开始演示",
+      "ug": "ئۈلگىنى قايتا باشلاش",
+      "kk": "دەمونى قايتا باستاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.172",
+      "zh": "将清除当前浏览器里发布的设备、收藏和交易意向，恢复初始演示数据。",
+      "ug": "بۇ توركۆرگۈچتىكى يوللانغان ماشىنا، ساقلىۋالغانلار ۋە ئىلتىماسلار ئۆچۈرۈلۈپ، دەسلەپكى ئۈلگە ئەسلىگە كېلىدۇ.",
+      "kk": "وسى براۋزەردەگى جىبەرىلگەن تەحنيكا، ساقتاعاندار جانە وتىنىشتەر وشىرىلىپ، باستاپقى دەمو قالپىنا كەلەدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.173",
+      "zh": "保留数据",
+      "ug": "ئۇچۇرنى ساقلاش",
+      "kk": "دەرەكتەردى ساقتاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.174",
+      "zh": "已恢复初始演示数据",
+      "ug": "دەسلەپكى ئۈلگە ئەسلىگە كەلتۈرۈلدى",
+      "kk": "باستاپقى دەمو قالپىنا كەلتىرىلدى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.175",
+      "zh": "确认重置",
+      "ug": "ئەسلىگە قايتۇرۇشنى جەزملەش",
+      "kk": "قالپىنا كەلتىرۋدى راستاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.176",
+      "zh": "设置",
+      "ug": "تەڭشەكلەر",
+      "kk": "باپتاۋلار",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.177",
+      "zh": "语言与显示",
+      "ug": "تىل ۋە كۆرسىتىش",
+      "kk": "تىل جانە كورىنىس",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.178",
+      "zh": "选择你熟悉的语言",
+      "ug": "ئۆزىڭىزگە تونۇش تىلنى تاللاڭ",
+      "kk": "وزىڭىزگە تانىس تىلدى تاڭداڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.179",
+      "zh": "界面语言",
+      "ug": "كۆرۈنمە يۈز تىلى",
+      "kk": "ينتەرفەيس تىلى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.180",
+      "zh": "选择后立即生效，并保存在当前浏览器。",
+      "ug": "تاللىغاندا دەرھال كۈچكە ئىگە بولۇپ، بۇ توركۆرگۈچتە ساقلىنىدۇ.",
+      "kk": "تاڭداعاندا بىردەن كۇشىنە ەنەدى جانە وسى براۋزەردە ساقتالىدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.181",
+      "zh": "演示译文 · 待专业核验",
+      "ug": "ئۈلگە تەرجىمە · كەسپىي تەكشۈرۈشنى كۈتۈۋاتىدۇ",
+      "kk": "ۇلگىلىك اۋدارما · كاسىبي تەكسەرۋدى كۇتۋدە",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.182",
+      "zh": "维语和哈萨克语翻译为演示草稿，农业术语尚未经专业人员核验。",
+      "ug": "ئۇيغۇرچە ۋە قازاقچە تەرجىمە ئۈلگە دەسلەپكى نۇسخىسى؛ دېھقانچىلىق ئاتالغۇلىرى تېخى كەسپىي خادىملار تەرىپىدىن تەكشۈرۈلمىگەن.",
+      "kk": "ۇيعىرشا جانە قازاقشا اۋدارما — العاشقى دەمو نۇسقاسى؛ اۋىل شارۋاشىلىعى اتاۋلارىن ماماندار الى تەكسەرمەگەن.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.183",
+      "zh": "语言切换只改变界面与示例设备说明。品牌、型号、地名保留原名；用户发布的原文不会自动翻译。",
+      "ug": "تىل ئالماشتۇرۇش كۆرۈنمە يۈز ۋە ئۈلگە ماشىنا چۈشەندۈرۈشىنى ئۆزگەرتىدۇ. ماركا، مودېل ۋە يەر نامى ساقلىنىدۇ؛ ئىشلەتكۈچى يازغان تېكىست ئاپتوماتىك تەرجىمە قىلىنمايدۇ.",
+      "kk": "تىل اۋىستىرۋ ينتەرفەيس پەن ۇلگىلىك تەحنيكا سيپاتتاماسىن وزگەرتەدى. ماركا، مودەل جانە جەر اتاۋى ساقتالىدى؛ قولدانۋشى ماتىنى اۆتوماتتى اۋدارىلمايدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.184",
+      "zh": "维语和哈萨克语使用新疆常用的阿拉伯字母，从右向左显示；人民币、型号与日期保持清晰顺序。",
+      "ug": "ئۇيغۇرچە ۋە قازاقچە شىنجاڭدا كۆپ ئىشلىتىلىدىغان ئەرەب يېزىقىدا، ئوڭدىن سولغا كۆرسىتىلىدۇ. پۇل، مودېل ۋە چېسلا ئېنىق تەرتىپتە ساقلىنىدۇ.",
+      "kk": "ۇيعىرشا جانە قازاقشا شىنجاڭدا كەڭ قولدانىلاتىن اراب جازۋىمەن، وڭنان سولعا كورسەتىلەدى. اقشا، مودەل جانە كۇن رەتى انىق ساقتالىدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.185",
+      "zh": "返回集市",
+      "ug": "بازارغا قايتىش",
+      "kk": "بازارعا قايتۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.186",
+      "zh": "后台审核演示",
+      "ug": "باشقۇرۇش تەكشۈرۈش ئۈلگىسى",
+      "kk": "باسقارۋ تەكسەرۋ دەمو",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.187",
+      "zh": "同一站点体验人工审核",
+      "ug": "ئوخشاش تور بېكەتتە قولدا تەكشۈرۈشنى سىناڭ",
+      "kk": "وسى سايتتا قولمەن تەكسەرۋدى سىناڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.188",
+      "zh": "进入后台审核",
+      "ug": "باشقۇرۇش تەكشۈرۈشىگە كىرىش",
+      "kk": "باسقارۋ تەكسەرۋىنە كىرۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.189",
+      "zh": "后台为中文运营界面，仅在当前浏览器模拟审核，没有真实管理员权限或跨设备同步。",
+      "ug": "باشقۇرۇش كۆرۈنمە يۈزى خەنزۇچە، تەكشۈرۈش پەقەت بۇ توركۆرگۈچتە تەقلىد قىلىنىدۇ؛ ھەقىقىي باشقۇرغۇچى ھوقۇقى ياكى ماسقەدەملەش يوق.",
+      "kk": "باسقارۋ ينتەرفەيسى قىتايشا، تەكسەرۋ تەك وسى براۋزەردە ۇلگىلەنەدى؛ ناقتى اكىمشى قۇقىعى نەمەسە سينحرونداۋ جوق.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.190",
+      "zh": "语言偏好无法保存，刷新后可能恢复中文。",
+      "ug": "تىل تاللىشى ساقلەنمىدى، يېڭىلىغاندا خەنزۇچىغا قايتىشى مۇمكىن.",
+      "kk": "تىل تاڭداۋى ساقتالمادى، جاڭارتقاندا قىتايشاعا قايتۋى مۇمكىن.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.191",
+      "zh": "送交人工审核",
+      "ug": "قولدا تەكشۈرۈشكە يوللاش",
+      "kk": "قولمەن تەكسەرۋگە جىبەرۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.192",
+      "zh": "提交后先进入人工审核，通过后才会出现在集市。所有语言的信息遵循同一审核流程。",
+      "ug": "يوللانغان ئۇچۇر ئالدى بىلەن قولدا تەكشۈرۈلىدۇ، تەستىقتىن كېيىن بازاردا كۆرۈنىدۇ. بارلىق تىللارغا ئوخشاش تەكشۈرۈش قوللىنىلىدۇ.",
+      "kk": "جىبەرىلگەن اقپارات الدىمەن قولمەن تەكسەرىلەدى، ماقۇلدانعاننان كەيىن بازاردا كورىنەدى. بارلىق تىلدەگى اقپاراتقا بىر تەرتىپ قولدانىلادى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.193",
+      "zh": "发布内容语言",
+      "ug": "يوللانغان تېكىستنىڭ تىلى",
+      "kk": "جىبەرىلگەن ماتىن تىلى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.194",
+      "zh": "请按实际填写的语言选择，供专业运营人员分配审核。",
+      "ug": "ئەمەلىي يازغان تىلىڭىزنى تاللاڭ، كەسپىي تەكشۈرگۈچىگە تەقسىملىنىدۇ.",
+      "kk": "ناق ماتىن تىلىن تاڭداڭىز، كاسىبي تەكسەرۋشىگە بولۋگە ارنالعان.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.195",
+      "zh": "待人工审核",
+      "ug": "قولدا تەكشۈرۈشنى كۈتۈۋاتىدۇ",
+      "kk": "قولمەن تەكسەرۋدى كۇتۋدە",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.196",
+      "zh": "已审核公开",
+      "ug": "تەكشۈرۈلۈپ ئاشكارىلاندى",
+      "kk": "تەكسەرىلىپ جاريالاندى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.197",
+      "zh": "已退回",
+      "ug": "قايتۇرۇلدى",
+      "kk": "قايتارىلدى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.198",
+      "zh": "审核备注",
+      "ug": "تەكشۈرۈش ئىزاھاتى",
+      "kk": "تەكسەرۋ ەسكەرتپەسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.199",
+      "zh": "设备尚未通过人工审核，暂不能提交交易意向",
+      "ug": "ماشىنا تېخى قولدا تەكشۈرۈشتىن ئۆتمىدى، سودا ئىلتىماسى يوللىيالمايسىز",
+      "kk": "تەحنيكا الى قولمەن تەكسەرۋدەن وتپەدى، ساۋدا وتىنىشىن جىبەرۋگە بولمايدى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.200",
+      "zh": "查看{title}",
+      "ug": "{title} نى كۆرۈش",
+      "kk": "{title} قاراۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.201",
+      "zh": "查看{title}详情",
+      "ug": "{title} تەپسىلاتى",
+      "kk": "{title} تولىق اقپاراتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.202",
+      "zh": "移除{title}意向",
+      "ug": "{title} ئىلتىماسىنى ئۆچۈرۈش",
+      "kk": "{title} وتىنىشىن الىپ تاستاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.203",
+      "zh": "设备租金 · {days} 天",
+      "ug": "ماشىنا ئىجارە ھەققى · {days} كۈن",
+      "kk": "تەحنيكا جالعە اقىسى · {days} كۇن",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.204",
+      "zh": "{start} 至 {end}",
+      "ug": "{start} دىن {end} غىچە",
+      "kk": "{start} - {end}",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.205",
+      "zh": "请填写联系人姓名（最多 40 字）",
+      "ug": "ئالاقىلاشقۇچى ئىسمىنى كىرگۈزۈڭ (ئەڭ كۆپ 40 ھەرپ)",
+      "kk": "بايلانىسۋشىنىڭ ەسىمىن ەنگىزىڭىز (40 تاڭباعا دەيىن)",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.206",
+      "zh": "请填写有效的中国大陆手机号",
+      "ug": "توغرا جۇڭگو چوڭ قۇرۇقلۇق يانفون نومۇرىنى كىرگۈزۈڭ",
+      "kk": "قىتاي قۇرىلىقتىق بولىگىنىڭ جارامدى تەلەفون نومەرىن ەنگىزىڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.207",
+      "zh": "请选择租用起止日期",
+      "ug": "ئىجارە باشلىنىش ۋە ئاخىرلىشىش ۋاقتىنى تاللاڭ",
+      "kk": "جالعە باستالۋ جانە اياقتالۋ كۇندەرىن تاڭداڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.208",
+      "zh": "开始日期不能早于今天",
+      "ug": "باشلىنىش ۋاقتى بۈگۈندىن بۇرۇن بولمايدۇ",
+      "kk": "باستالۋ كۇنى بۇگىننەن ەرتە بولماۋى كەرەك",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.209",
+      "zh": "请选择有效日期",
+      "ug": "توغرا چېسلا تاللاڭ",
+      "kk": "جارامدى كۇندى تاڭداڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.210",
+      "zh": "日租金必须为正整数",
+      "ug": "كۈنلۈك ئىجارە ھەققى مۇسبەت پۈتۈن سان بولسۇن",
+      "kk": "كۇندىك جالعە اقىسى وڭ پۇتىن سان بولۋى كەرەك",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.211",
+      "zh": "结束日期不能早于开始日期",
+      "ug": "ئاخىرلىشىش ۋاقتى باشلىنىشتىن بۇرۇن بولمايدۇ",
+      "kk": "اياقتالۋ كۇنى باستالۋ كۇنىنەن ەرتە بولماۋى كەرەك",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.212",
+      "zh": "租金金额超出有效范围",
+      "ug": "ئىجارە سوممىسى توغرا دائىرىدىن ئاشتى",
+      "kk": "جالعە سومماسى جارامدى شەكتەن استى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.213",
+      "zh": "设备信息无效，请刷新后重试",
+      "ug": "ماشىنا ئۇچۇرى ئىناۋەتسىز، بەتنى يېڭىلاپ قايتا سىناڭ",
+      "kk": "تەحنيكا اقپاراتى جارامسىز، بەتتى جاڭارتىپ قايتا سىناڭىز",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.214",
+      "zh": "农忙优选",
+      "ug": "دېھقانچىلىققا تاللانغان",
+      "kk": "ناۋقانعا تاڭدالعان",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.215",
+      "zh": "成色精选",
+      "ug": "ھالىتى ياخشى",
+      "kk": "كۇيى جاقسى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.216",
+      "zh": "轻松租用",
+      "ug": "ئاسان ئىجارە",
+      "kk": "جەڭىل جالعە",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.217",
+      "zh": "一手设备",
+      "ug": "بىر ئىگىدار ماشىنا",
+      "kk": "بىر يەسى بولعان تەحنيكا",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.218",
+      "zh": "近期上架",
+      "ug": "يېقىندا قوشۇلدى",
+      "kk": "جۋىردا قوسىلدى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.219",
+      "zh": "收割机",
+      "ug": "ھوسۇل يىغىش ماشىنىسى",
+      "kk": "استىق وراتىن كومباين",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.220",
+      "zh": "农业无人飞机",
+      "ug": "دېھقانچىلىق ئۇچقۇچىسىز ئايروپىلانى",
+      "kk": "اۋىل شارۋاشىلىعىنا ارنالعان ۇشقىشسىز ۇشۋ اپپاراتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.221",
+      "zh": "旋耕机",
+      "ug": "ئايلانما يەر ھەيدەش ماشىنىسى",
+      "kk": "اينالمالى توپىراق وڭدەگىش",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.222",
+      "zh": "播种机",
+      "ug": "ئۇرۇق سېپىش ماشىنىسى",
+      "kk": "سەپلەگىش",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.223",
+      "zh": "马力",
+      "ug": "ئات كۈچى",
+      "kk": "ات كۇشى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.224",
+      "zh": "载重",
+      "ug": "يۈك كۆتۈرۈش",
+      "kk": "جۇك كوتەرۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.225",
+      "zh": "幅宽",
+      "ug": "ئىش كەڭلىكى",
+      "kk": "جۇمىس ەنى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.226",
+      "zh": "行播种",
+      "ug": "قۇرلۇق ئۇرۇق سېپىش",
+      "kk": "قاتارعا ەگۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.227",
+      "zh": "120 马力 · 四轮驱动 · 可配旋耕机",
+      "ug": "120 ئات كۈچى · تۆت چاق قوزغىلىدۇ · ئايلانما سايمان ئۇلىنىدۇ",
+      "kk": "120 ات كۇشى · تورت دۇڭگەلەگى جەتەكشى · اينالمالى قۇرال قوسىلادى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.228",
+      "zh": "全喂入式 · 水稻小麦两用",
+      "ug": "تولۇق كىرگۈزۈش · شال ۋە بۇغدايغا ماس",
+      "kk": "تولىق جىناۋ · كۇرىش پەن بيدايدا قولدانىلادى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.229",
+      "zh": "植保喷洒 · 智能作业规划",
+      "ug": "زىرائەت قوغداش پۈركۈش · ئەقلىي خىزمەت پىلانى",
+      "kk": "ەگىندى قورعاۋعا بۈركۋ · اقىلدى جۇمىس جوسپارى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.230",
+      "zh": "70 马力 · 个人一手 · 定期保养",
+      "ug": "70 ئات كۈچى · بىر ئىگىدار · قەرەللىك ئاسراش",
+      "kk": "70 ات كۇشى · بىر يەسى بولعان · تۇراقتى كۇتىم",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.231",
+      "zh": "2.3 米幅宽 · 配套 80–120 马力",
+      "ug": "كەڭلىكى 2.3 m · 80–120 ئات كۈچىگە ماس",
+      "kk": "ەنى 2.3 m · 80–120 ات كۇشىنە ساي",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.232",
+      "zh": "6 kg/s 喂入量 · 可预约验机",
+      "ug": "كىرگۈزۈش مىقدارى 6 kg/s · كۆرۈشنى ئالدىن كېلىشىش",
+      "kk": "جىناۋ كولەمى 6 kg/s · تەحنيكانى قاراۋعا جازىلۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.233",
+      "zh": "90 马力 · 耕整地多面手",
+      "ug": "90 ئات كۈچى · يەر ھەيدەش ۋە تەكشىلەش",
+      "kk": "90 ات كۇشى · جەر جىرتۋ جانە تەگىستەۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.234",
+      "zh": "四行播种 · 玉米免耕施肥",
+      "ug": "تۆت قۇرلۇق تېرىش · كۆممىقوناقنى ھەيدىمەي تېرىش ۋە ئوغۇتلاش",
+      "kk": "تورت قاتارعا ەگۋ · جۇگەرىنى جىرتپاى ەگۋ جانە تىڭايتۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.235",
+      "zh": "适合春耕、旋耕与播种作业，保养记录齐全。可在农场交接，具体运输与农具配置需双方确认。",
+      "ug": "ئەتىيازلىق يەر ھەيدەش، ئايلانما ھەيدەش ۋە ئۇرۇق سېپىشقا ماس. ئاسراش خاتىرىسى تولۇق. مەيداندا تاپشۇرۇلىدۇ؛ توشۇش ۋە سايمانلارنى ئىككى تەرەپ جەزملەيدۇ.",
+      "kk": "كوكتەمگى جەر جىرتۋ، اينالمالى وڭدەۋ جانە ەگۋگە ساي. كۇتىم جازباسى تولىق. شارۋاشىلىقتا تاپسىرىلادى؛ تاسىمال مەن قۇرالداردى ەكى جاқ كەلىسەدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.236",
+      "zh": "履带式收割机，适合水稻与小麦收获。租期、作物适配及运输费用请在提交意向后与农场确认。",
+      "ug": "زەنجىرلىك ھوسۇل يىغىش ماشىنىسى، شال ۋە بۇغدايغا ماس. ئىلتىماستىن كېيىن ئىجارە مۇددىتى، زىرائەت ماسلىقى ۋە توشۇش ھەققىنى مەيدان بىلەن كېلىشىڭ.",
+      "kk": "شىنجىرتاباندى كومباين، كۇرىش پەن بيدايدى ورۋعا ساي. وتىنىشتەن كەيىن مەرزىم، داگىلعا سايكەستىك جانە تاسىمال اقىسىن شارۋاشىلىقپەن كەلىسىڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.237",
+      "zh": "适用于农田植保喷洒，演示租金仅含设备。飞手资质、电池套件、农药与作业服务需另行确认。",
+      "ug": "ئېتىزدىكى زىرائەت قوغداش پۈركۈشىگە ماس. ئۈلگە ئىجارە ھەققى پەقەت ماشىنا ئۈچۈن. ئۇچقۇچى سالاھىيىتى، باتارېيە، دورا ۋە مۇلازىمەت ئايرىم كېلىشىلىدۇ.",
+      "kk": "ەگىستىكتى قورعاۋعا بۈركۋگە ساي. ۇلگىلىك جالعە اقىسى تەك تەحنيكاعا. ۇشقىش بىلىكتىلىگى، باتارەيا، دارى جانە قىزمەت بولەك كەلىسىلەدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.238",
+      "zh": "农场自用拖拉机，因设备升级出售。支持线下看机，最终成交价与设备状态以双方验机确认为准。",
+      "ug": "مەيداندا ئىشلىتىلگەن تىراكتور، يېڭىلاش سەۋەبىدىن سېتىلىدۇ. نەق مەيداندا كۆرگىلى بولىدۇ؛ باھا ۋە ھالىتىنى ئىككى تەرەپ تەكشۈرۈپ جەزملەيدۇ.",
+      "kk": "شارۋاشىلىقتا قولدانىلعان تراكتور، جاڭارتۋعا بايلانىستى ساتىلادى. ورنىندا قاراۋعا بولادى؛ باعا مەن كۇيىن ەكى جاق تەكسەرىپ باستايدى.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.239",
+      "zh": "适合旱地整地与碎土，刀片状态良好。请提前确认拖拉机挂接规格，运输和安装由双方约定。",
+      "ug": "قۇرغاق يەرنى تەكشىلەش ۋە توپا ئۇۋىتىشقا ماس، پىچاق ھالىتى ياخشى. تىراكتور ئۇلاش ئۆلچىمىنى ئالدىن تەكشۈرۈڭ، توشۇش ۋە ئورنىتىشنى كېلىشىڭ.",
+      "kk": "قۇرقاق جەردى تەگىستەۋ جانە توپىراقتى ۇساتۋعا ساي، پىشاقتارى جاقسى. تراكتورعا تىركەۋ سيپاتتاماسىن الدىن الا تەكسەرىڭىز، تاسىمال مەن ورناتۋدى كەلىسىڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.240",
+      "zh": "合作社自用收割设备，适合水稻、小麦收获。可提供维护记录，欢迎预约现场验机。",
+      "ug": "ھەمكارلىق كوپىراتىپى ئىشلىتىدىغان ھوسۇل ماشىنىسى، شال ۋە بۇغدايغا ماس. ئاسراش خاتىرىسى بار، ئالدىن كېلىشىپ نەق مەيداندا كۆرۈڭ.",
+      "kk": "كووپەراتيۆ قولدانعان وراق تەحنيكاسى، كۇرىش پەن بيدايدا قولدانىلادى. كۇتىم جازباسى بار، الدىن الا جازىلىپ ورنىندا قاراڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.241",
+      "zh": "适用于耕整地、播种与田间运输。当前信息为农场自行发布，请在交易前确认设备与农场资质。",
+      "ug": "يەر ھەيدەش، ئۇرۇق سېپىش ۋە ئېتىز توشۇشىغا ماس. ئۇچۇر ئۈلگە مەيدان تەرىپىدىن يوللانغان؛ سودا ئالدىدا ماشىنا ۋە مەيدان سالاھىيىتىنى تەكشۈرۈڭ.",
+      "kk": "جەر جىرتۋ، ەگۋ جانە ەگىستىك تاسىمالىنا ساي. اقپارات ۇلگىلىك شارۋاشىلىقتان؛ ساۋدا الدىندا تەحنيكا مەن شارۋاشىلىق قۇجاتىن تەكسەرىڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.242",
+      "zh": "适合玉米免耕精量播种，配套施肥功能。作业前需根据土壤与种子规格完成调试。",
+      "ug": "كۆممىقوناقنى يەر ھەيدىمەي ئېنىق تېرىشقا ماس، ئوغۇتلاش ئىقتىدارى بار. ئىشتىن بۇرۇن تۇپراق ۋە ئۇرۇق ئۆلچىمىگە ئاساسەن تەڭشەڭ.",
+      "kk": "جۇگەرىنى جىرتپاى دال ەگۋگە ساي، تىڭايتۋ قىزمەتى بار. جۇمىس الدىندا توپىراق پەن تۇقىمعا ساي رەتتەڭىز.",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.243",
+      "zh": "驱动形式",
+      "ug": "قوزغىتىش شەكلى",
+      "kk": "جەتەك تۈرى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.244",
+      "zh": "四轮驱动",
+      "ug": "تۆت چاق قوزغىلىدۇ",
+      "kk": "تورت دۇڭگەلەگى جەتەكشى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.245",
+      "zh": "额定功率",
+      "ug": "نامدىكى قۇۋۋەت",
+      "kk": "نومينال قۋات",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.246",
+      "zh": "交接方式",
+      "ug": "تاپشۇرۇش ئۇسۇلى",
+      "kk": "تاپسىرۋ تاسىلى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.247",
+      "zh": "农场自提 / 协商配送",
+      "ug": "مەيداندىن ئېلىش / كېلىشىپ يەتكۈزۈش",
+      "kk": "شارۋاشىلىقتان الۋ / كەلىسىپ جەتكىزۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.248",
+      "zh": "行走方式",
+      "ug": "يۈرۈش شەكلى",
+      "kk": "جۇرىس تۈرى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.249",
+      "zh": "履带式",
+      "ug": "زەنجىرلىك",
+      "kk": "شىنجىرتاباندى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.250",
+      "zh": "适用作物",
+      "ug": "ماس زىرائەت",
+      "kk": "ساي داگىل",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.251",
+      "zh": "水稻 / 小麦",
+      "ug": "شال / بۇغداي",
+      "kk": "كۇرىش / بيداى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.252",
+      "zh": "工作幅宽",
+      "ug": "ئىش كەڭلىكى",
+      "kk": "جۇمىس ەنى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.253",
+      "zh": "喷洒载重",
+      "ug": "پۈركۈش يۈكى",
+      "kk": "بۈركۋ جۇگى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.254",
+      "zh": "设备用途",
+      "ug": "ماشىنا ئىشلىتىلىشى",
+      "kk": "تەحنيكا ماقساتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.255",
+      "zh": "农田植保",
+      "ug": "ئېتىز زىرائىتىنى قوغداش",
+      "kk": "ەگىندى قورعاۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.256",
+      "zh": "配套服务",
+      "ug": "قوشۇمچە مۇلازىمەت",
+      "kk": "قوسىمشا قىزمەت",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.257",
+      "zh": "与农场协商",
+      "ug": "مەيدان بىلەن كېلىشىش",
+      "kk": "شارۋاشىلىقپەن كەلىسۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.258",
+      "zh": "设备来源",
+      "ug": "ماشىنا مەنبەسى",
+      "kk": "تەحنيكا شىعۋ تەگى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.259",
+      "zh": "农场自用",
+      "ug": "مەيداندا ئىشلىتىلگەن",
+      "kk": "شارۋاشىلىقتا قولدانىلعان",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.260",
+      "zh": "看机方式",
+      "ug": "ماشىنا كۆرۈش ئۇسۇلى",
+      "kk": "تەحنيكانى قاراۋ تاسىلى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.261",
+      "zh": "预约到场",
+      "ug": "ئالدىن كېلىشىپ كېلىش",
+      "kk": "الدىن الا جازىلىپ كەلۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.262",
+      "zh": "作业幅宽",
+      "ug": "ئىش كەڭلىكى",
+      "kk": "جۇمىس ەنى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.263",
+      "zh": "适配动力",
+      "ug": "ماس قۇۋۋەت",
+      "kk": "ساي قۋات",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.264",
+      "zh": "用途",
+      "ug": "ئىشلىتىلىشى",
+      "kk": "ماقساتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.265",
+      "zh": "旋耕 / 整地",
+      "ug": "ئايلانما ھەيدەش / تەكشىلەش",
+      "kk": "اينالمالى وڭدەۋ / تەگىستەۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.266",
+      "zh": "喂入量",
+      "ug": "كىرگۈزۈش مىقدارى",
+      "kk": "جىناۋ كولەمى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.267",
+      "zh": "配套农具",
+      "ug": "قوشۇمچە سايمان",
+      "kk": "قوسىمشا قۇرال",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.268",
+      "zh": "可协商",
+      "ug": "كېلىشكىلى بولىدۇ",
+      "kk": "كەلىسۋگە بولادى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.269",
+      "zh": "农场自提",
+      "ug": "مەيداندىن ئۆزى ئېلىش",
+      "kk": "شارۋاشىلىقتان وزى الۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.270",
+      "zh": "播种行数",
+      "ug": "تېرىش قۇر سانى",
+      "kk": "ەگۋ قاتار سانى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.271",
+      "zh": "4 行",
+      "ug": "4 قۇر",
+      "kk": "4 قاتار",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.272",
+      "zh": "玉米",
+      "ug": "كۆممىقوناق",
+      "kk": "جۇگەرى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.273",
+      "zh": "功能",
+      "ug": "ئىقتىدار",
+      "kk": "قىزمەتى",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    },
+    {
+      "id": "message.274",
+      "zh": "免耕 / 播种 / 施肥",
+      "ug": "ھەيدىمەي تېرىش / ئۇرۇق سېپىش / ئوغۇتلاش",
+      "kk": "جىرتپاى ەگۋ / تۇقىم سەۋ / تىڭايتۋ",
+      "review": {
+        "ug": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        },
+        "kk": {
+          "status": "draft",
+          "reviewer": null,
+          "reviewedAt": null
+        }
+      }
+    }
+  ]
+}
