@@ -5,7 +5,11 @@ import {
   filterListings,
   isListing,
   parsePersistedState,
+  publicListings,
+  reviewListing,
   seedListings,
+  submitListing,
+  makeReviewSamples,
   type ListingFilters,
 } from './domain';
 
@@ -44,6 +48,88 @@ describe('marketplace discovery', () => {
     expect(filterListings(seedListings, { ...filters, sort: 'newest' })[0]?.id).toBe(
       'implement-02',
     );
+  });
+});
+
+describe('manual review before public discovery', () => {
+  const draft = { ...seedListings[0]!, id: 'local-review' };
+
+  it.each(['zh-CN', 'ug-CN', 'kk-Arab-CN'] as const)(
+    'holds a %s submission out of all public results until the current version is approved',
+    (language) => {
+      const pending = submitListing(draft, language, now);
+      expect(pending.contentLanguage).toBe(language);
+      expect(pending.moderation?.status).toBe('pending_review');
+      expect(publicListings([pending])).toHaveLength(seedListings.length);
+      expect(() => createBooking(pending, contact, now)).toThrow('人工审核');
+      const approved = reviewListing(pending, 'approved', '原文与参数核对完成', now);
+      expect(publicListings([approved])[0]?.id).toBe(draft.id);
+      expect(approved.moderation?.history[0]).toMatchObject({ decision: 'approved', revision: 1 });
+      expect(
+        createBooking(approved, { ...contact, startDate: '2026-11-03', endDate: '2026-11-03' }, now)
+          .total,
+      ).toBe(680);
+    },
+  );
+
+  it('requires a concrete rejection reason and rejects reviewing an already-decided version', () => {
+    const pending = submitListing(draft, 'ug-CN', now);
+    expect(() => reviewListing(pending, 'rejected', ' ', now)).toThrow('退回原因');
+    const rejected = reviewListing(pending, 'rejected', '请补充日租金的计价单位', now);
+    expect(publicListings([rejected])).toHaveLength(seedListings.length);
+    expect(rejected.moderation?.history[0]?.note).toBe('请补充日租金的计价单位');
+    expect(() => reviewListing(rejected, 'approved', '', now)).toThrow('待审');
+  });
+
+  it('revokes visibility when edited content is resubmitted, retaining the previous audit event', () => {
+    const approved = reviewListing(submitListing(draft, 'kk-Arab-CN', now), 'approved', '', now);
+    const revised = submitListing({ ...approved, price: 800 }, 'kk-Arab-CN', now);
+    expect(revised.revision).toBe(2);
+    expect(revised.moderation?.history).toHaveLength(1);
+    expect(publicListings([revised])).toHaveLength(seedListings.length);
+    expect(publicListings([{ ...approved, revision: 2 }])).toHaveLength(seedListings.length);
+    expect(() => createBooking(revised, contact, now)).toThrow('人工审核');
+  });
+
+  it('migrates older local listings to pending instead of silently publishing them', () => {
+    const recovered = parsePersistedState(JSON.stringify({ listings: [draft] }));
+    expect(recovered.listings[0]).toMatchObject({
+      contentLanguage: 'zh-CN',
+      revision: 1,
+      moderation: { status: 'pending_review', history: [] },
+    });
+    expect(publicListings(recovered.listings)).toHaveLength(seedListings.length);
+    expect(parsePersistedState(JSON.stringify(recovered))).toEqual(recovered);
+  });
+
+  it('rejects inconsistent stored approval metadata and never overwrites public fixture IDs', () => {
+    const pending = submitListing(draft, 'zh-CN', now);
+    const forged = { ...pending, moderation: { ...pending.moderation, status: 'approved' } };
+    expect(parsePersistedState(JSON.stringify({ listings: [forged] })).listings).toEqual([]);
+    const colliding = reviewListing(
+      submitListing(seedListings[0]!, 'zh-CN', now),
+      'approved',
+      '',
+      now,
+    );
+    expect(publicListings([colliding]).filter(({ id }) => id === seedListings[0]!.id)).toHaveLength(
+      1,
+    );
+  });
+
+  it('loads only fictional pending samples, with one for each supported content language', () => {
+    const samples = makeReviewSamples(now);
+    expect(samples.map(({ contentLanguage }) => contentLanguage)).toEqual([
+      'zh-CN',
+      'ug-CN',
+      'kk-Arab-CN',
+    ]);
+    expect(
+      samples.every(
+        (listing) => isListing(listing) && listing.moderation?.status === 'pending_review',
+      ),
+    ).toBe(true);
+    expect(publicListings(samples)).toHaveLength(seedListings.length);
   });
 });
 

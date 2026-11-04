@@ -4,6 +4,8 @@ import {
   ArrowRight,
   BadgeCheck,
   CalendarDays,
+  Settings as SettingsIcon,
+  Languages,
   Check,
   ChevronDown,
   CircleHelp,
@@ -30,12 +32,19 @@ import {
   isListing,
   parsePersistedState,
   seedListings,
+  submitListing,
+  reviewListing,
+  publicListings,
+  makeReviewSamples,
   type Category,
   type Listing,
   type PersistedState,
   type SortOrder,
   type TradeMode,
 } from './domain';
+import ReviewDesk from './ReviewDesk';
+import Settings from './Settings';
+import { useI18n, languages, type Locale } from './i18n';
 
 const STORAGE_KEY = 'heji-demo-v1';
 const categories: { id: Category; label: string; icon: typeof Tractor }[] = [
@@ -76,6 +85,7 @@ function Modal({
   onClose: () => void;
   wide?: boolean;
 }) {
+  const { t } = useI18n();
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     const dialog = ref.current;
@@ -99,10 +109,10 @@ function Modal({
     >
       <div className="modal-heading">
         <div>
-          <span className="eyebrow">HEJI · 农机共享集市</span>
+          <span className="eyebrow">{t('message.006')}</span>
           <h2 id="modal-title">{title}</h2>
         </div>
-        <button className="icon-button" onClick={onClose} aria-label="关闭弹窗">
+        <button className="icon-button" onClick={onClose} aria-label={t('message.007')}>
           <X size={21} />
         </button>
       </div>
@@ -122,46 +132,71 @@ function ListingCard({
   onFavorite: () => void;
   onOpen: () => void;
 }) {
+  const { t, sourceText, localizeListing } = useI18n();
+  listing = localizeListing(listing);
   return (
     <article className="listing-card">
       <div className="card-visual">
-        <button className="image-button" onClick={onOpen} aria-label={`查看${listing.title}`}>
+        <button
+          className="image-button"
+          onClick={onOpen}
+          aria-label={sourceText('查看{title}').replace('{title}', listing.title)}
+        >
           <img
             src={listing.image}
-            alt={`${categories.find((item) => item.id === listing.category)?.label}示意图片`}
+            alt={`${sourceText(categories.find((item) => item.id === listing.category)?.label || t('message.001'))} · ${sourceText('示意图片')}`}
             loading="lazy"
           />
         </button>
         <span className={`mode-badge ${listing.mode}`}>
-          {listing.mode === 'rent' ? '可租赁' : '二手出售'}
+          {listing.mode === 'rent' ? t('message.008') : t('message.009')}
         </span>
         <button
           className={`favorite-button ${saved ? 'is-saved' : ''}`}
           onClick={onFavorite}
-          aria-label={`${saved ? '取消收藏' : '收藏'}${listing.title}`}
+          aria-label={`${sourceText(saved ? t('message.010') : t('message.011'))} ${listing.title}`}
           aria-pressed={saved}
         >
           <Heart size={18} fill={saved ? 'currentColor' : 'none'} />
         </button>
-        <span className="photo-note">示意图片</span>
+        <span className="photo-note">{t('message.012')}</span>
       </div>
       <div className="card-body">
+        {listing.moderation && (
+          <p className={`moderation-label ${listing.moderation.status}`}>
+            {sourceText(
+              listing.moderation.status === 'approved'
+                ? t('message.196')
+                : listing.moderation.status === 'rejected'
+                  ? t('message.197')
+                  : t('message.195'),
+            )}
+          </p>
+        )}
         <div className="card-kicker">
-          <span>{listing.year} 年</span>
+          <span>
+            {listing.year} {t('message.013')}
+          </span>
           <span className="dot" />
-          <span>{money(listing.hours)} 小时</span>
+          <span>
+            {money(listing.hours)} {t('message.014')}
+          </span>
           {listing.tag && <span className="card-tag">{listing.tag}</span>}
         </div>
-        <button className="card-title" onClick={onOpen}>
+        <button className="card-title" dir="auto" onClick={onOpen}>
           {listing.title}
         </button>
-        <p className="card-subtitle">{listing.subtitle}</p>
+        <p className="card-subtitle" dir="auto">
+          {listing.subtitle}
+        </p>
         <div className="price-line">
           <span className="price">
             <small>¥</small>
             {money(listing.price)}
           </span>
-          <span className="price-unit">{listing.mode === 'rent' ? '/ 天' : '售价'}</span>
+          <span className="price-unit">
+            {listing.mode === 'rent' ? t('message.015') : t('message.016')}
+          </span>
           <span className="card-location">
             <MapPin size={13} />
             {listing.location.split(' · ')[1] || listing.location}
@@ -173,9 +208,12 @@ function ListingCard({
           </span>
           <span>{listing.farm}</span>
           {listing.verified && (
-            <BadgeCheck size={15} className="verified" aria-label="演示认证农场" />
+            <BadgeCheck size={15} className="verified" aria-label={t('message.017')} />
           )}
-          <button onClick={onOpen} aria-label={`查看${listing.title}详情`}>
+          <button
+            onClick={onOpen}
+            aria-label={sourceText('查看{title}详情').replace('{title}', listing.title)}
+          >
             <ArrowRight size={17} />
           </button>
         </div>
@@ -197,6 +235,11 @@ function Detail({
   onClose: () => void;
   onBooking: (booking: ReturnType<typeof createBooking>) => void;
 }) {
+  const { t, sourceText, localizeListing } = useI18n();
+  listing = localizeListing(listing);
+  const canBook =
+    seedListings.some((seed) => seed.id === listing.id) ||
+    listing.moderation?.status === 'approved';
   const [start, setStart] = useState(today());
   const [end, setEnd] = useState(today());
   const [error, setError] = useState('');
@@ -220,7 +263,7 @@ function Detail({
       setSuccess(true);
       setError('');
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : '请检查填写的信息');
+      setError(cause instanceof Error ? cause.message : t('message.018'));
     }
   }
   return (
@@ -230,44 +273,50 @@ function Detail({
           <span className="success-icon">
             <Check size={32} />
           </span>
-          <span className="eyebrow">意向已保存</span>
-          <h3>离下一次丰收，又近了一步。</h3>
+          <span className="eyebrow">{t('message.019')}</span>
+          <h3>{t('message.020')}</h3>
           <p>
-            可在「我的农场」查看本次{listing.mode === 'rent' ? '租赁' : '购买'}意向。
+            {t('message.021')} {listing.mode === 'rent' ? t('message.022') : t('message.023')}{' '}
+            {t('message.024')}
             <br />
-            这是本地演示，尚未通知农场，也不会产生扣款。
+            {t('message.025')}
           </p>
           <button className="button primary" onClick={onClose}>
-            继续逛逛 <ArrowRight size={17} />
+            {t('message.026')}
+            <ArrowRight size={17} />
           </button>
         </div>
       ) : (
         <div className="detail-grid">
           <div className="detail-info">
-            <img className="detail-image" src={listing.image} alt="农机示意图片，与实际型号无关" />
+            <img className="detail-image" src={listing.image} alt={t('message.027')} />
             <div className="detail-tags">
               <span className={`mode-badge ${listing.mode}`}>
-                {listing.mode === 'rent' ? '灵活租赁' : '二手出售'}
+                {listing.mode === 'rent' ? t('message.028') : t('message.009')}
               </span>
               <span>
                 <MapPin size={14} />
                 {listing.location}
               </span>
-              <span>图片及参数均为演示</span>
+              <span>{t('message.029')}</span>
             </div>
-            <h3>关于这台设备</h3>
-            <p>{listing.description}</p>
+            <h3>{t('message.030')}</h3>
+            <p dir="auto">{listing.description}</p>
             <dl className="spec-grid">
               <div>
-                <dt>出厂年份</dt>
-                <dd>{listing.year} 年</dd>
+                <dt>{t('message.031')}</dt>
+                <dd>
+                  {listing.year} {t('message.013')}
+                </dd>
               </div>
               <div>
-                <dt>使用时长</dt>
-                <dd>{money(listing.hours)} 小时</dd>
+                <dt>{t('message.032')}</dt>
+                <dd>
+                  {money(listing.hours)} {t('message.014')}
+                </dd>
               </div>
               <div>
-                <dt>动力 / 规格</dt>
+                <dt>{t('message.033')}</dt>
                 <dd>{listing.power}</dd>
               </div>
               {Object.entries(listing.specs || {}).map(([key, value]) => (
@@ -283,12 +332,12 @@ function Detail({
               </span>
               <div>
                 <strong>{listing.farm}</strong>
-                <p>{listing.verified ? '示例认证农场 · 资料仅供演示' : '示例农场 · 尚未认证'}</p>
+                <p>{listing.verified ? t('message.034') : t('message.035')}</p>
               </div>
               <button
                 className={`icon-button ${saved ? 'is-saved' : ''}`}
                 onClick={onFavorite}
-                aria-label={saved ? '取消收藏' : '收藏设备'}
+                aria-label={saved ? t('message.010') : t('message.036')}
                 aria-pressed={saved}
               >
                 <Heart size={21} fill={saved ? 'currentColor' : 'none'} />
@@ -296,90 +345,110 @@ function Detail({
             </div>
           </div>
           <form className="booking-form" onSubmit={submit}>
-            <span className="eyebrow">
-              {listing.mode === 'rent' ? '给农忙，搭把手' : '为农场，添好帮手'}
-            </span>
-            <div className="detail-price">
-              <span className="price">
-                <small>¥</small>
-                {money(listing.price)}
-              </span>
-              <span>{listing.mode === 'rent' ? '/ 天' : '参考售价'}</span>
-            </div>
-            <p className="muted">
-              {listing.mode === 'rent'
-                ? '按自然日计费，起止日期均计入租期。'
-                : '提交购买意向，演示中不发生真实交易。'}
-            </p>
-            {listing.mode === 'rent' && (
-              <div className="date-fields">
-                <label>
-                  开始日期
-                  <input
-                    type="date"
-                    required
-                    min={today()}
-                    value={start}
-                    onInput={(event) => setStart(event.currentTarget.value)}
-                    onChange={(event) => setStart(event.target.value)}
-                  />
-                </label>
-                <label>
-                  结束日期
-                  <input
-                    type="date"
-                    required
-                    min={start || today()}
-                    value={end}
-                    onInput={(event) => setEnd(event.currentTarget.value)}
-                    onChange={(event) => setEnd(event.target.value)}
-                  />
-                </label>
+            {!canBook && (
+              <div className="review-readonly">
+                <strong>
+                  {sourceText(
+                    listing.moderation?.status === 'rejected' ? t('message.197') : t('message.195'),
+                  )}
+                </strong>
+                <p>{sourceText('设备尚未通过人工审核，暂不能提交交易意向')}</p>
+                {listing.moderation?.history.at(-1)?.note && (
+                  <p dir="auto">
+                    {sourceText('审核备注')}: {listing.moderation.history.at(-1)?.note}
+                  </p>
+                )}
               </div>
             )}
-            <label>
-              联系人
-              <input
-                name="name"
-                placeholder="请输入演示姓名"
-                maxLength={40}
-                required
-                autoComplete="off"
-              />
-            </label>
-            <label>
-              联系手机
-              <input
-                name="phone"
-                type="tel"
-                placeholder="例如 13800000000"
-                pattern="1[3-9][0-9]{9}"
-                maxLength={11}
-                required
-                autoComplete="off"
-              />
-            </label>
-            <div className="quote-total">
-              <span>
-                {listing.mode === 'rent'
-                  ? `设备租金${total ? ` · ${total / listing.price} 天` : ''}`
-                  : '设备参考价'}
+            <fieldset disabled={!canBook}>
+              <span className="eyebrow">
+                {listing.mode === 'rent' ? t('message.037') : t('message.038')}
               </span>
-              <strong>{total ? `¥ ${money(total)}` : '请选择有效租期'}</strong>
-            </div>
-            <p className="quote-note">运输、押金、保险及配套作业另行协商，未计入此金额。</p>
-            {error && (
-              <p className="form-error" role="alert">
-                {error}
+              <div className="detail-price">
+                <span className="price">
+                  <small>¥</small>
+                  {money(listing.price)}
+                </span>
+                <span>{listing.mode === 'rent' ? t('message.015') : t('message.039')}</span>
+              </div>
+              <p className="muted">
+                {listing.mode === 'rent' ? t('message.040') : t('message.041')}
               </p>
-            )}
-            <button className="button primary full" type="submit">
-              提交{listing.mode === 'rent' ? '租赁' : '购买'}意向 <ArrowRight size={17} />
-            </button>
-            <p className="demo-form-note">
-              <ShieldCheck size={15} />
-              仅保存在当前浏览器。请使用虚构联系信息。
-            </p>
+              {listing.mode === 'rent' && (
+                <div className="date-fields">
+                  <label>
+                    {t('message.042')}
+                    <input
+                      type="date"
+                      required
+                      min={today()}
+                      value={start}
+                      onInput={(event) => setStart(event.currentTarget.value)}
+                      onChange={(event) => setStart(event.target.value)}
+                    />
+                  </label>
+                  <label>
+                    {t('message.043')}
+                    <input
+                      type="date"
+                      required
+                      min={start || today()}
+                      value={end}
+                      onInput={(event) => setEnd(event.currentTarget.value)}
+                      onChange={(event) => setEnd(event.target.value)}
+                    />
+                  </label>
+                </div>
+              )}
+              <label>
+                {t('message.044')}
+                <input
+                  name="name"
+                  placeholder={t('message.045')}
+                  maxLength={40}
+                  required
+                  autoComplete="off"
+                />
+              </label>
+              <label>
+                {t('message.046')}
+                <input
+                  name="phone"
+                  type="tel"
+                  placeholder={t('message.047')}
+                  pattern="1[3-9][0-9]{9}"
+                  maxLength={11}
+                  required
+                  autoComplete="off"
+                />
+              </label>
+              <div className="quote-total">
+                <span>
+                  {listing.mode === 'rent'
+                    ? sourceText('设备租金 · {days} 天').replace(
+                        '{days}',
+                        String(total ? total / listing.price : 0),
+                      )
+                    : t('message.048')}
+                </span>
+                <strong>{total ? `¥ ${money(total)}` : t('message.049')}</strong>
+              </div>
+              <p className="quote-note">{t('message.050')}</p>
+              {error && (
+                <p className="form-error" role="alert">
+                  {sourceText(error)}
+                </p>
+              )}
+              <button className="button primary full" type="submit">
+                {t('message.051')} {listing.mode === 'rent' ? t('message.022') : t('message.023')}{' '}
+                {t('message.052')}
+                <ArrowRight size={17} />
+              </button>
+              <p className="demo-form-note">
+                <ShieldCheck size={15} />
+                {t('message.053')}
+              </p>
+            </fieldset>
           </form>
         </div>
       )}
@@ -394,6 +463,8 @@ function Publish({
   onClose: () => void;
   onPublish: (listing: Listing) => void;
 }) {
+  const { t, sourceText, locale } = useI18n();
+  const [contentLanguage, setContentLanguage] = useState<Locale>(locale);
   const [mode, setMode] = useState<'rent' | 'buy'>('rent');
   const [category, setCategory] = useState<Exclude<Category, 'all'>>('tractor');
   const [error, setError] = useState('');
@@ -408,49 +479,63 @@ function Publish({
       mode,
       price: Number(data.get('price')),
       location: String(data.get('location') || '').trim(),
-      farm: '我的演示农场',
+      farm: t('message.054'),
       verified: false,
       hours: Number(data.get('hours')),
       year: Number(data.get('year')),
       power: String(data.get('power') || '').trim(),
       description: String(data.get('description') || '').trim(),
       image: images[category],
-      tag: '新鲜上架',
+      tag: t('message.055'),
       createdAt: new Date().toISOString(),
     };
     if (!isListing(listing)) {
-      setError('请完整填写设备信息，价格需为正整数。');
+      setError(t('message.056'));
       return;
     }
-    onPublish(listing);
+    onPublish(submitListing(listing, contentLanguage));
   }
   return (
-    <Modal title="让闲置农机，忙起来。" onClose={onClose}>
+    <Modal title={t('message.057')} onClose={onClose}>
       <form className="publish-form" onSubmit={submit}>
-        <p className="muted">发布到本地演示集市，试着为好设备找个新去处。</p>
+        <p className="muted">{t('message.192')}</p>
+        <label className="publish-language">
+          {t('message.193')}
+          <select
+            value={contentLanguage}
+            onChange={(event) => setContentLanguage(event.target.value as Locale)}
+          >
+            {languages.map((language) => (
+              <option key={language.tag} value={language.tag} lang={language.tag}>
+                {language.name}
+              </option>
+            ))}
+          </select>
+          <small>{t('message.194')}</small>
+        </label>
         <div className="segmented publish-mode">
           <button
             type="button"
             className={mode === 'rent' ? 'active' : ''}
             onClick={() => setMode('rent')}
           >
-            我要出租
+            {t('message.059')}
           </button>
           <button
             type="button"
             className={mode === 'buy' ? 'active' : ''}
             onClick={() => setMode('buy')}
           >
-            我要出售
+            {t('message.060')}
           </button>
         </div>
         <div className="form-grid">
           <label className="span-two">
-            设备名称
-            <input name="title" required maxLength={60} placeholder="例如：东方红 LX904 拖拉机" />
+            {t('message.061')}
+            <input dir="auto" name="title" required maxLength={60} placeholder={t('message.062')} />
           </label>
           <label>
-            设备分类
+            {t('message.063')}
             <select
               value={category}
               onChange={(event) => setCategory(event.target.value as Exclude<Category, 'all'>)}
@@ -459,33 +544,39 @@ function Publish({
                 .filter((item) => item.id !== 'all')
                 .map((item) => (
                   <option value={item.id} key={item.id}>
-                    {item.label}
+                    {sourceText(item.label)}
                   </option>
                 ))}
             </select>
           </label>
           <label>
-            {mode === 'rent' ? '日租金（元 / 天）' : '出售价格（元）'}
+            {mode === 'rent' ? t('message.064') : t('message.065')}
             <input
               name="price"
               type="number"
               min="1"
               max="100000000"
               step="1"
-              placeholder={mode === 'rent' ? '例如 500' : '例如 50000'}
+              placeholder={mode === 'rent' ? t('message.066') : t('message.067')}
               required
             />
           </label>
           <label>
-            所在地区
-            <input name="location" placeholder="例如：山东 · 潍坊" required maxLength={40} />
+            {t('message.068')}
+            <input
+              dir="auto"
+              name="location"
+              placeholder={t('message.069')}
+              required
+              maxLength={40}
+            />
           </label>
           <label>
-            动力 / 规格
-            <input name="power" placeholder="例如：90 马力" required maxLength={40} />
+            {t('message.033')}
+            <input dir="auto" name="power" placeholder={t('message.070')} required maxLength={40} />
           </label>
           <label>
-            出厂年份
+            {t('message.031')}
             <input
               name="year"
               type="number"
@@ -496,55 +587,60 @@ function Publish({
             />
           </label>
           <label>
-            使用小时
+            {t('message.071')}
             <input name="hours" type="number" min="0" max="100000" defaultValue={0} required />
           </label>
           <label className="span-two">
-            一句话亮点
+            {t('message.072')}
             <input
+              dir="auto"
               name="subtitle"
-              placeholder="例如：四轮驱动 · 保养记录齐全"
+              placeholder={t('message.073')}
               maxLength={100}
               required
             />
           </label>
           <label className="span-two">
-            设备介绍
+            {t('message.074')}
             <textarea
+              dir="auto"
               name="description"
               rows={3}
               maxLength={1000}
-              placeholder="介绍设备状态、适用作业和交接方式……"
+              placeholder={t('message.075')}
               required
             />
           </label>
         </div>
         <div className="publish-image-note">
-          <img src={images[category]} alt="按设备分类匹配的演示图" />
+          <img src={images[category]} alt={t('message.076')} />
           <p>
-            自动匹配分类示意图
+            {t('message.077')}
             <br />
-            <span>真实照片上传留待后端接入。</span>
+            <span>{t('message.078')}</span>
           </p>
         </div>
         {error && (
           <p className="form-error" role="alert">
-            {error}
+            {sourceText(error)}
           </p>
         )}
         <button type="submit" className="button primary full">
           <Plus size={18} />
-          发布到演示集市
+          {t('message.191')}
         </button>
-        <p className="demo-form-note">仅在本机可见，不会同步给其他用户。</p>
+        <p className="demo-form-note">{t('message.080')}</p>
       </form>
     </Modal>
   );
 }
 
 export default function App() {
+  const { t, sourceText, locale, localizeListing } = useI18n();
   const [state, setState] = useState<PersistedState>(loadState);
-  const [view, setView] = useState<'market' | 'favorites' | 'farm'>('market');
+  const [view, setView] = useState<'market' | 'favorites' | 'farm' | 'settings' | 'admin'>(
+    'market',
+  );
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState<Category>('all');
   const [mode, setMode] = useState<TradeMode>('all');
@@ -555,6 +651,10 @@ export default function App() {
   const [toast, setToast] = useState('');
   const [storageError, setStorageError] = useState(false);
   const marketRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    setActive(null);
+    setToast('');
+  }, [locale]);
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -571,7 +671,13 @@ export default function App() {
   useEffect(() => {
     if (mode === 'all') setSort('recommended');
   }, [mode]);
-  const allListings = useMemo(() => [...state.listings, ...seedListings], [state.listings]);
+  const allListings = useMemo(
+    () => publicListings(state.listings).map(localizeListing),
+    [state.listings, localizeListing],
+  );
+  const visibleFavoriteCount = allListings.filter((listing) =>
+    state.favorites.includes(listing.id),
+  ).length;
   const locations = [...new Set(allListings.map((listing) => listing.location.split(' · ')[0]))];
   const visible = useMemo(
     () =>
@@ -591,7 +697,7 @@ export default function App() {
         ? current.favorites.filter((item) => item !== id)
         : [...current.favorites, id],
     }));
-    setToast(exists ? '已取消收藏' : '已收藏，可在「我的收藏」查看');
+    setToast(exists ? t('message.081') : t('message.082'));
   }
   function navigate(next: typeof view) {
     setView(next);
@@ -623,48 +729,71 @@ export default function App() {
     <>
       <header className="site-header">
         <div className="header-inner">
-          <button className="brand" onClick={() => navigate('market')} aria-label="禾集首页">
+          <button
+            className="brand"
+            onClick={() => navigate('market')}
+            aria-label={t('message.083')}
+          >
             <span className="brand-symbol">
               <Sprout size={27} strokeWidth={1.7} />
             </span>
             <span className="brand-name">
-              禾集<small>HEJI</small>
+              {t('message.084')}
+              <small>HEJI</small>
             </span>
             <span className="brand-divider" />
-            <span className="brand-description">农机共享集市</span>
+            <span className="brand-description">{t('message.085')}</span>
           </button>
-          <nav aria-label="主导航">
+          <nav aria-label={t('message.086')}>
             <button
               className={view === 'market' ? 'active' : ''}
               onClick={() => navigate('market')}
             >
-              农机集市
+              {t('message.087')}
             </button>
             <button
               className={view === 'favorites' ? 'active' : ''}
               onClick={() => navigate('favorites')}
             >
-              我的收藏
-              {state.favorites.length > 0 && (
-                <span className="nav-count">{state.favorites.length}</span>
+              {t('message.088')}
+              {visibleFavoriteCount > 0 && (
+                <span className="nav-count">{visibleFavoriteCount}</span>
               )}
             </button>
             <button className={view === 'farm' ? 'active' : ''} onClick={() => navigate('farm')}>
-              我的农场
+              {t('message.089')}
+            </button>
+            <button
+              className={view === 'settings' ? 'active' : ''}
+              onClick={() => navigate('settings')}
+            >
+              <SettingsIcon size={15} />
+              {sourceText('设置')}
+            </button>
+            <button className={view === 'admin' ? 'active' : ''} onClick={() => navigate('admin')}>
+              <ShieldCheck size={15} />
+              {sourceText('后台审核演示')}
             </button>
           </nav>
           <div className="header-actions">
+            <button
+              className="icon-button quick-settings"
+              onClick={() => navigate('settings')}
+              aria-label={sourceText('语言与显示')}
+            >
+              <Languages size={20} />
+            </button>
             <span className="demo-status">
               <i />
               Demo
             </span>
             <button className="button primary header-publish" onClick={() => setOverlay('publish')}>
               <Plus size={17} />
-              <span>发布农机</span>
+              <span>{t('message.090')}</span>
             </button>
             <button
               className="user-avatar"
-              aria-label="查看我的演示农场"
+              aria-label={t('message.091')}
               onClick={() => navigate('farm')}
             >
               <UserRound size={20} />
@@ -673,25 +802,54 @@ export default function App() {
         </div>
       </header>
       <main>
+        {view === 'settings' && (
+          <Settings onExit={() => navigate('market')} onAdmin={() => navigate('admin')} />
+        )}
+        {view === 'admin' && (
+          <ReviewDesk
+            listings={state.listings}
+            onReview={(id, decision, note) => {
+              setState((current) => ({
+                ...current,
+                listings: current.listings.map((listing) =>
+                  listing.id === id ? reviewListing(listing, decision, note) : listing,
+                ),
+              }));
+            }}
+            onLoadSamples={() => {
+              setState((current) => ({
+                ...current,
+                listings: [
+                  ...current.listings,
+                  ...makeReviewSamples().filter(
+                    (sample) => !current.listings.some((listing) => listing.id === sample.id),
+                  ),
+                ],
+              }));
+            }}
+            onExit={() => navigate('market')}
+          />
+        )}
+
         {view === 'market' && (
           <section className="hero">
             <div className="hero-copy">
               <div className="hero-eyebrow">
                 <span />
-                让农机流转，让土地丰收
+                {t('message.092')}
               </div>
               <h1>
-                好农机，
+                {t('message.093')}
                 <br />
-                遇见<span>下一片田。</span>
+                {t('message.094')} <span>{t('message.095')}</span>
                 <svg viewBox="0 0 310 18" aria-hidden="true">
                   <path d="M4 12Q140 0 303 9" />
                 </svg>
               </h1>
               <p>
-                闲置的好设备，也能成为别人的好帮手。
+                {t('message.096')}
                 <br />
-                在禾集，连接农场，让买卖和租用更简单。
+                {t('message.097')}
               </p>
               <button
                 className="hero-link"
@@ -700,12 +858,13 @@ export default function App() {
                   marketRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
               >
-                找一台趁手的农机 <ArrowRight size={18} />
+                {t('message.098')}
+                <ArrowRight size={18} />
               </button>
               <div className="hero-stats">
                 <div>
                   <strong>{allListings.length.toString().padStart(2, '0')}</strong>
-                  <span>台演示农机</span>
+                  <span>{t('message.099')}</span>
                 </div>
                 <span className="stat-divider" />
                 <div>
@@ -714,21 +873,17 @@ export default function App() {
                       .toString()
                       .padStart(2, '0')}
                   </strong>
-                  <span>家示例农场</span>
+                  <span>{t('message.100')}</span>
                 </div>
                 <span className="stat-divider" />
                 <div>
-                  <strong>租 / 售</strong>
-                  <span>按需灵活选择</span>
+                  <strong>{t('message.101')}</strong>
+                  <span>{t('message.102')}</span>
                 </div>
               </div>
             </div>
             <div className="hero-visual">
-              <img
-                src="/images/tractor.webp"
-                alt="拖拉机在田野中作业的示意图片"
-                fetchPriority="high"
-              />
+              <img src="/images/tractor.webp" alt={t('message.103')} fetchPriority="high" />
               <div className="hero-image-shade" />
               <span className="hero-visual-label">
                 <span className="tiny-sun" />
@@ -739,21 +894,22 @@ export default function App() {
                   <Sprout size={23} />
                 </span>
                 <div>
-                  每台农机，都值得物尽其用。<small>A new season. A new possibility.</small>
+                  {t('message.104')}
+                  <small>A new season. A new possibility.</small>
                 </div>
               </div>
-              <span className="hero-photo-caption">田野作业示意 · 非真实挂牌设备</span>
+              <span className="hero-photo-caption">{t('message.105')}</span>
             </div>
           </section>
         )}
         {view === 'favorites' && (
           <section className="page-intro">
             <span className="eyebrow">YOUR COLLECTION</span>
-            <h1>好设备，先收藏。</h1>
-            <p>为下一次农忙，留住心动的好帮手。</p>
+            <h1>{t('message.106')}</h1>
+            <p>{t('message.107')}</p>
           </section>
         )}
-        {view !== 'farm' && (
+        {(view === 'market' || view === 'favorites') && (
           <section className="market-section" ref={marketRef} id="market">
             <div className="search-panel">
               <form
@@ -765,8 +921,8 @@ export default function App() {
               >
                 <Search size={21} />
                 <input
-                  aria-label="搜索农机、品牌或农场"
-                  placeholder="搜农机、品牌，或你熟悉的农场"
+                  aria-label={t('message.108')}
+                  placeholder={t('message.109')}
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                 />
@@ -775,7 +931,7 @@ export default function App() {
                     type="button"
                     className="icon-button clear-search"
                     onClick={() => setQuery('')}
-                    aria-label="清空搜索"
+                    aria-label={t('message.110')}
                   >
                     <X size={16} />
                   </button>
@@ -784,11 +940,11 @@ export default function App() {
                 <div className="region-select">
                   <MapPin size={17} />
                   <select
-                    aria-label="选择地区"
+                    aria-label={t('message.111')}
                     value={location}
                     onChange={(event) => setLocation(event.target.value)}
                   >
-                    <option value="all">全国地区</option>
+                    <option value="all">{t('message.112')}</option>
                     {locations.map((region) => (
                       <option value={region} key={region}>
                         {region}
@@ -798,11 +954,12 @@ export default function App() {
                   <ChevronDown size={14} />
                 </div>
                 <button type="submit" className="button primary search-button">
-                  搜索农机 <ArrowRight size={16} />
+                  {t('message.113')}
+                  <ArrowRight size={16} />
                 </button>
               </form>
             </div>
-            <div className="category-tabs" aria-label="农机分类">
+            <div className="category-tabs" aria-label={t('message.114')}>
               {categories.map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
@@ -811,20 +968,21 @@ export default function App() {
                   aria-pressed={category === id}
                 >
                   <Icon size={21} strokeWidth={1.7} />
-                  {label}
+                  {sourceText(label)}
                   {id === 'all' && <span>{allListings.length}</span>}
                 </button>
               ))}
             </div>
             <div className="market-toolbar">
               <div className="market-heading">
-                <h2>{view === 'favorites' ? '我的收藏' : '发现好农机'}</h2>
+                <h2>{view === 'favorites' ? t('message.088') : t('message.115')}</h2>
                 <span>
-                  {visible.length} 台设备{view === 'market' && '，总有一台适合你'}
+                  {visible.length} {t('message.116')}
+                  {view === 'market' && t('message.117')}
                 </span>
               </div>
               <div className="toolbar-controls">
-                <div className="segmented" aria-label="交易方式">
+                <div className="segmented" aria-label={t('message.118')}>
                   {(['all', 'rent', 'buy'] as TradeMode[]).map((value) => (
                     <button
                       key={value}
@@ -832,24 +990,28 @@ export default function App() {
                       aria-pressed={mode === value}
                       onClick={() => setMode(value)}
                     >
-                      {value === 'all' ? '全部' : value === 'rent' ? '租农机' : '买农机'}
+                      {value === 'all'
+                        ? t('message.119')
+                        : value === 'rent'
+                          ? t('message.120')
+                          : t('message.121')}
                     </button>
                   ))}
                 </div>
                 <div className="sort-select">
                   <ArrowDownUp size={15} />
                   <select
-                    aria-label="设备排序"
+                    aria-label={t('message.122')}
                     value={sort}
                     onChange={(event) => setSort(event.target.value as SortOrder)}
                   >
-                    <option value="recommended">综合推荐</option>
-                    <option value="newest">最新发布</option>
+                    <option value="recommended">{t('message.123')}</option>
+                    <option value="newest">{t('message.124')}</option>
                     <option value="price-asc" disabled={mode === 'all'}>
-                      价格从低到高
+                      {t('message.125')}
                     </option>
                     <option value="price-desc" disabled={mode === 'all'}>
-                      价格从高到低
+                      {t('message.126')}
                     </option>
                   </select>
                   <ChevronDown size={13} />
@@ -862,32 +1024,32 @@ export default function App() {
               <div className="empty-state">
                 <Search size={32} strokeWidth={1.5} />
                 <h3>
-                  {view === 'favorites' && !state.favorites.length
-                    ? '还没有收藏的设备'
-                    : '暂时没有找到合适的农机'}
+                  {view === 'favorites' && !visibleFavoriteCount
+                    ? t('message.127')
+                    : t('message.128')}
                 </h3>
                 <p>
-                  {view === 'favorites' && !state.favorites.length
-                    ? '点击设备上的爱心，把好帮手留在这里。'
-                    : '试试其他关键词，或放宽筛选条件。'}
+                  {view === 'favorites' && !visibleFavoriteCount
+                    ? t('message.129')
+                    : t('message.130')}
                 </p>
                 <button
                   className="button secondary"
                   onClick={() => {
                     resetFilters();
-                    if (view === 'favorites' && !state.favorites.length) navigate('market');
+                    if (view === 'favorites' && !visibleFavoriteCount) navigate('market');
                   }}
                 >
-                  {view === 'favorites' && !state.favorites.length ? '去集市逛逛' : '清除筛选条件'}
+                  {view === 'favorites' && !visibleFavoriteCount
+                    ? t('message.131')
+                    : t('message.132')}
                   <ArrowRight size={16} />
                 </button>
               </div>
             )}
             <p className="results-note">
               <SlidersHorizontal size={13} />
-              {mode === 'all'
-                ? '租金与售价分开比较，选择租 / 售后可按价格排序。'
-                : '已展示全部匹配设备，试试其他分类发现更多。'}
+              {mode === 'all' ? t('message.133') : t('message.134')}
             </p>
           </section>
         )}
@@ -896,37 +1058,40 @@ export default function App() {
             <div className="farm-page-heading">
               <div>
                 <span className="eyebrow">MY FARM · DEMO</span>
-                <h1>我的演示农场</h1>
-                <p>管理设备和交易意向，为下一季做好准备。</p>
+                <h1>{t('message.054')}</h1>
+                <p>{t('message.135')}</p>
               </div>
               <button className="button primary" onClick={() => setOverlay('publish')}>
                 <Plus size={18} />
-                发布农机
+                {t('message.090')}
               </button>
             </div>
             <div className="farm-stats">
               <div>
                 <Warehouse size={22} />
                 <span>
-                  我的发布<strong>{state.listings.length}</strong>
+                  {t('message.136')}
+                  <strong>{state.listings.length}</strong>
                 </span>
               </div>
               <div>
                 <CalendarDays size={22} />
                 <span>
-                  交易意向<strong>{state.bookings.length}</strong>
+                  {t('message.137')}
+                  <strong>{state.bookings.length}</strong>
                 </span>
               </div>
               <div>
                 <Heart size={22} />
                 <span>
-                  已收藏设备<strong>{state.favorites.length}</strong>
+                  {t('message.138')}
+                  <strong>{visibleFavoriteCount}</strong>
                 </span>
               </div>
             </div>
             <div className="section-heading">
-              <h2>我的交易意向</h2>
-              <span>仅本地保存 · 尚未通知农场</span>
+              <h2>{t('message.139')}</h2>
+              <span>{t('message.140')}</span>
             </div>
             {state.bookings.length ? (
               <div className="booking-list">
@@ -939,23 +1104,28 @@ export default function App() {
                       <h3>{booking.listingTitle}</h3>
                       <p>
                         {booking.mode === 'rent'
-                          ? `${booking.startDate} 至 ${booking.endDate}`
-                          : '购买意向 · 等待线下验机'}{' '}
+                          ? sourceText('{start} 至 {end}')
+                              .replace('{start}', booking.startDate || '')
+                              .replace('{end}', booking.endDate || '')
+                          : t('message.141')}{' '}
                         · {booking.contactName}
                       </p>
                       <small>{booking.id}</small>
                     </div>
-                    <span className="pending-badge">本地意向</span>
+                    <span className="pending-badge">{t('message.142')}</span>
                     <strong>¥ {money(booking.total)}</strong>
                     <button
                       className="icon-button"
-                      aria-label={`移除${booking.listingTitle}意向`}
+                      aria-label={sourceText('移除{title}意向').replace(
+                        '{title}',
+                        booking.listingTitle,
+                      )}
                       onClick={() => {
                         setState((current) => ({
                           ...current,
                           bookings: current.bookings.filter((item) => item.id !== booking.id),
                         }));
-                        setToast('本地意向已移除');
+                        setToast(t('message.143'));
                       }}
                     >
                       <Trash2 size={17} />
@@ -966,16 +1136,19 @@ export default function App() {
             ) : (
               <div className="empty-state compact">
                 <CalendarDays size={29} />
-                <h3>下一次农忙，从这里开始</h3>
-                <p>找到心仪设备后，提交一份租赁或购买意向。</p>
+                <h3>{t('message.144')}</h3>
+                <p>{t('message.145')}</p>
                 <button className="button secondary" onClick={() => navigate('market')}>
-                  去找好农机 <ArrowRight size={16} />
+                  {t('message.146')}
+                  <ArrowRight size={16} />
                 </button>
               </div>
             )}
             <div className="section-heading">
-              <h2>我发布的农机</h2>
-              <span>{state.listings.length} 台设备</span>
+              <h2>{t('message.147')}</h2>
+              <span>
+                {state.listings.length} {t('message.116')}
+              </span>
             </div>
             {state.listings.length ? (
               <div className="listing-grid">{cards(state.listings)}</div>
@@ -983,67 +1156,74 @@ export default function App() {
               <div className="publish-empty">
                 <Sprout size={30} />
                 <div>
-                  <h3>让你的好设备，服务更多土地。</h3>
-                  <p>从发布第一台闲置农机开始。</p>
+                  <h3>{t('message.148')}</h3>
+                  <p>{t('message.149')}</p>
                 </div>
                 <button className="button secondary" onClick={() => setOverlay('publish')}>
                   <Plus size={16} />
-                  发布第一台
+                  {t('message.150')}
                 </button>
               </div>
             )}
           </section>
         )}
-        <section className="values-strip">
-          <div>
-            <span className="value-icon">
-              <Sprout size={25} />
-            </span>
+        {view !== 'admin' && view !== 'settings' && (
+          <section className="values-strip">
             <div>
-              <h3>农场直连，更近一步</h3>
-              <p>让设备与需求，在田间相遇。</p>
+              <span className="value-icon">
+                <Sprout size={25} />
+              </span>
+              <div>
+                <h3>{t('message.151')}</h3>
+                <p>{t('message.152')}</p>
+              </div>
             </div>
-          </div>
-          <div>
-            <span className="value-icon">
-              <ShieldCheck size={25} />
-            </span>
             <div>
-              <h3>设备信息，一目了然</h3>
-              <p>年份、工时和规格，清楚再决定。</p>
+              <span className="value-icon">
+                <ShieldCheck size={25} />
+              </span>
+              <div>
+                <h3>{t('message.153')}</h3>
+                <p>{t('message.154')}</p>
+              </div>
             </div>
-          </div>
-          <div>
-            <span className="value-icon">
-              <Tractor size={26} />
-            </span>
             <div>
-              <h3>可租可买，刚刚好</h3>
-              <p>按农时选设备，把投入用在刀刃上。</p>
+              <span className="value-icon">
+                <Tractor size={26} />
+              </span>
+              <div>
+                <h3>{t('message.155')}</h3>
+                <p>{t('message.156')}</p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
       </main>
       <footer className="site-footer">
         <div>
           <span className="footer-brand">
             <Sprout size={20} />
-            禾集 <small>HEJI</small>
+            {t('message.084')}
+            <small>HEJI</small>
           </span>
-          <span>让好农机流转，让每一季丰收。</span>
+          <span>{t('message.157')}</span>
         </div>
         <div>
-          <span className="footer-demo">概念演示 · 全部数据均为虚构</span>
+          <span className="footer-demo">{t('message.158')}</span>
+          <button onClick={() => navigate('settings')}>
+            <Languages size={14} />
+            {sourceText('设置')}
+          </button>
           <button onClick={() => setOverlay('about')}>
             <CircleHelp size={14} />
-            演示说明
+            {t('message.159')}
           </button>
-          <button onClick={() => setOverlay('reset')}>重置演示</button>
+          <button onClick={() => setOverlay('reset')}>{t('message.160')}</button>
         </div>
       </footer>
       {storageError && (
         <div className="storage-warning" role="alert">
-          当前浏览器无法保存数据，刷新后本次修改可能丢失。
+          {t('message.161')}
         </div>
       )}
       {toast && (
@@ -1071,39 +1251,35 @@ export default function App() {
             setState((current) => ({ ...current, listings: [listing, ...current.listings] }));
             setOverlay(null);
             navigate('farm');
-            setToast('设备已发布到本地演示集市');
+            setToast(t('message.162'));
           }}
         />
       )}
       {overlay === 'about' && (
-        <Modal title="从一台好农机开始。" onClose={() => setOverlay(null)}>
+        <Modal title={t('message.163')} onClose={() => setOverlay(null)}>
           <div className="about-content">
-            <p>禾集是一个农机买卖与租赁平台的概念演示，连接有设备的农场与有需求的人。</p>
+            <p>{t('message.164')}</p>
             <ul>
-              <li>浏览、搜索、分类筛选、地区筛选与收藏。</li>
-              <li>本地发布设备，提交购买 / 租赁意向。</li>
-              <li>租金按自然日计算，含起止当天。</li>
+              <li>{t('message.165')}</li>
+              <li>{t('message.166')}</li>
+              <li>{t('message.167')}</li>
             </ul>
-            <p>
-              设备图片来自
-              Unsplash，仅作分类示意，与品牌型号无关。所有农场、价格、参数与认证状态均为演示数据。
-            </p>
-            <p>
-              数据仅存于当前浏览器；没有真实登录、支付、消息通知或库存锁定。请勿填写真实个人信息。
-            </p>
+            <p>{t('message.168')}</p>
+            <p>{t('message.169')}</p>
             <button className="button primary full" onClick={() => setOverlay(null)}>
-              开始探索 <ArrowRight size={17} />
+              {t('message.170')}
+              <ArrowRight size={17} />
             </button>
           </div>
         </Modal>
       )}
       {overlay === 'reset' && (
-        <Modal title="重新开始演示" onClose={() => setOverlay(null)}>
+        <Modal title={t('message.171')} onClose={() => setOverlay(null)}>
           <div className="about-content">
-            <p>将清除当前浏览器里发布的设备、收藏和交易意向，恢复初始演示数据。</p>
+            <p>{t('message.172')}</p>
             <div className="modal-actions">
               <button className="button secondary" onClick={() => setOverlay(null)}>
-                保留数据
+                {t('message.173')}
               </button>
               <button
                 className="button primary"
@@ -1111,10 +1287,10 @@ export default function App() {
                   setState({ favorites: [], listings: [], bookings: [] });
                   setOverlay(null);
                   navigate('market');
-                  setToast('已恢复初始演示数据');
+                  setToast(t('message.174'));
                 }}
               >
-                确认重置
+                {t('message.175')}
               </button>
             </div>
           </div>

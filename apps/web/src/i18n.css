@@ -1,0 +1,423 @@
+@font-face {
+  font-family: 'HEJI Arabic';
+  src: url('/fonts/NotoSansArabic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+html[dir='rtl'],
+[lang='ug-CN'],
+[lang='kk-Arab-CN'],
+[dir='auto'] {
+  font-family: 'HEJI Arabic', 'Geeza Pro', 'Noto Sans Arabic', 'Arial', 'PingFang SC', sans-serif;
+}
+html[dir='rtl'] {
+  line-height: 1.8;
+}
+html[dir='rtl'] .site-header nav {
+  margin-inline-start: 0;
+}
+html[dir='rtl'] .hero h1 {
+  font-size: clamp(32px, 3.9vw, 49px);
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+html[dir='rtl'] .hero h1 svg {
+  transform: scaleX(-1);
+}
+html[dir='rtl'] .hero-copy > p {
+  line-height: 2.1;
+}
+html[dir='rtl'] .hero-eyebrow,
+html[dir='rtl'] .eyebrow,
+html[dir='rtl'] .brand-description {
+  letter-spacing: 0;
+}
+html[dir='rtl'] .listing-card .card-title {
+  line-height: 1.9;
+  font-size: 15px;
+}
+html[dir='rtl'] .card-subtitle {
+  line-height: 1.9;
+  min-height: 45px;
+  white-space: normal;
+}
+html[dir='rtl'] .price-line {
+  flex-wrap: wrap;
+}
+html[dir='rtl'] .card-location {
+  margin-inline-start: auto;
+  margin-left: 0;
+}
+html[dir='rtl'] .card-farm button,
+html[dir='rtl'] .detail-farm > .icon-button {
+  margin-inline-start: auto;
+  margin-left: 0;
+}
+html[dir='rtl'] .search-panel input {
+  text-align: start;
+}
+html[dir='rtl'] .mode-badge {
+  font-size: 11px;
+}
+html[dir='rtl'] .card-farm {
+  font-size: 11px;
+}
+html[dir='rtl'] .button,
+html[dir='rtl'] input,
+html[dir='rtl'] select,
+html[dir='rtl'] textarea {
+  font-size: 13px;
+}
+html[dir='rtl'] .button {
+  min-height: 44px;
+  white-space: normal;
+}
+html[dir='rtl'] .detail-grid,
+html[dir='rtl'] .settings-page {
+  text-align: start;
+}
+.price,
+.detail-price,
+.quote-total strong,
+input[type='date'],
+input[type='tel'],
+input[type='number'],
+.booking-row > strong,
+.booking-description small {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+html[dir='rtl'] .price-line {
+  text-align: start;
+}
+html[dir='rtl'] .card-title,
+html[dir='rtl'] .card-subtitle {
+  text-align: start;
+}
+html[dir='rtl'] .hero-link svg,
+html[dir='rtl'] .button > svg:last-child,
+html[dir='rtl'] .card-farm button svg {
+  transform: scaleX(-1);
+}
+.site-header {
+  height: auto;
+  min-height: 88px;
+}
+.header-inner {
+  min-height: 88px;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-block: 15px;
+}
+.site-header nav {
+  gap: 19px;
+  margin-left: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.site-header nav button {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  min-height: 42px;
+}
+.site-header nav button.active:after {
+  bottom: -4px;
+}
+.brand-description,
+.brand-divider {
+  display: none;
+}
+.header-actions {
+  gap: 12px;
+}
+.settings-page {
+  padding: 50px 0 70px;
+  max-width: 920px;
+  margin-inline: auto;
+}
+.settings-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+.settings-heading h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+.settings-heading p,
+.settings-card-title p {
+  color: #657566;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.settings-card {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px;
+  margin-top: 20px;
+}
+.settings-card-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.settings-card-title > svg {
+  flex-shrink: 0;
+  color: var(--green);
+  margin-top: 3px;
+}
+.settings-card-title h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.language-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+.language-option {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: start;
+  gap: 8px;
+  border: 1px solid #dce3d5;
+  border-radius: 9px;
+  padding: 17px;
+  min-height: 102px;
+}
+.language-option > span {
+  font-size: 20px;
+  width: 100%;
+}
+.language-option small {
+  color: #667465;
+  font-size: 12px;
+}
+.language-option > svg {
+  margin-inline-start: auto;
+}
+.language-option.selected {
+  border: 2px solid var(--green);
+  background: #f0f5e9;
+  padding: 16px;
+}
+.language-draft {
+  background: #fff7e5;
+  border-inline-start: 3px solid #b79140;
+  padding: 15px 18px;
+  color: #6b562c;
+  border-radius: 4px;
+}
+.language-draft strong {
+  font-size: 14px;
+}
+.language-draft p,
+.settings-note {
+  font-size: 13px;
+  line-height: 2;
+  margin-top: 10px;
+}
+.settings-note {
+  color: #657566;
+}
+.admin-entry > .button {
+  margin-top: 20px;
+}
+.publish-language {
+  margin-top: 18px;
+}
+.publish-language small {
+  font-size: 11px;
+  line-height: 1.9;
+  color: #657566;
+}
+.form-grid,
+.date-fields {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.form-grid > label,
+.detail-grid > * {
+  min-width: 0;
+}
+.publish-form input,
+.publish-form select,
+.publish-form textarea {
+  width: 100%;
+}
+html[dir='rtl'] .publish-form label {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.booking-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.booking-form fieldset > label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  gap: 8px;
+  font-size: 12px;
+}
+.booking-form fieldset[disabled] {
+  opacity: 0.55;
+}
+.review-readonly {
+  padding: 14px;
+  margin-bottom: 16px;
+  background: #fff4dd;
+  border-radius: 7px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.review-readonly p {
+  margin-top: 6px;
+}
+.moderation-label {
+  padding: 6px 9px;
+  background: #fff3da;
+  color: #85652c;
+  border-radius: 5px;
+  font-size: 11px;
+  display: inline-block;
+  margin-bottom: 9px;
+}
+.moderation-label.approved {
+  background: #edf5e9;
+  color: #27533b;
+}
+.moderation-label.rejected {
+  background: #faece6;
+  color: #98563e;
+}
+.toast {
+  max-width: calc(100vw - 30px);
+  white-space: normal;
+}
+@media (max-width: 900px) {
+  .header-inner {
+    gap: 9px 18px;
+  }
+  .site-header nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .header-actions {
+    margin-inline-start: auto;
+  }
+  .site-header nav button {
+    font-size: 12px;
+  }
+  .market-toolbar,
+  .market-heading,
+  .toolbar-controls {
+    flex-wrap: wrap;
+  }
+  html[dir='rtl'] .market-heading > span {
+    max-width: 100%;
+  }
+  html[dir='rtl'] .hero h1 {
+    font-size: 35px;
+  }
+  html[dir='rtl'] .hero-stats {
+    gap: 10px;
+  }
+}
+@media (max-width: 560px) {
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .form-grid .span-two {
+    grid-column: 1 / -1;
+  }
+  .header-inner {
+    padding-inline: 20px;
+  }
+  .site-header nav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+    gap: 22px;
+  }
+  .site-header nav button {
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+  .settings-page {
+    padding: 30px 0;
+  }
+  .settings-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .settings-heading h1 {
+    font-size: 27px;
+  }
+  .settings-card {
+    padding: 20px;
+  }
+  .language-options {
+    grid-template-columns: 1fr;
+  }
+  .language-option {
+    min-height: 76px;
+  }
+  .language-option > span {
+    width: auto;
+    flex: 1;
+  }
+  .language-option small {
+    margin-inline-start: auto;
+  }
+  html[dir='rtl'] .hero h1 {
+    font-size: 32px;
+    line-height: 1.8;
+  }
+  html[dir='rtl'] .hero-stats strong {
+    font-size: 20px;
+  }
+  html[dir='rtl'] .hero-stats span {
+    font-size: 11px;
+  }
+  html[dir='rtl'] .hero-note > div {
+    font-size: 14px;
+  }
+  html[dir='rtl'] .price {
+    font-size: 22px;
+  }
+  html[dir='rtl'] .price-unit {
+    font-size: 10px;
+  }
+  html[dir='rtl'] .category-tabs {
+    gap: 8px;
+  }
+  html[dir='rtl'] .category-tabs button {
+    font-size: 12px;
+  }
+  html[dir='rtl'] .market-heading {
+    gap: 8px;
+    align-items: flex-start;
+  }
+  html[dir='rtl'] .market-toolbar h2 {
+    font-size: 22px;
+  }
+  html[dir='rtl'] .site-footer {
+    gap: 15px;
+  }
+  .site-footer > div {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-11-04-demo-v2",
+  "channel": "demo",
+  "allowDraftTranslations": true,
+  "productionApproved": false,
+  "locales": [
+    {
+      "tag": "zh-CN",
+      "name": "简体中文",
+      "direction": "ltr"
+    },
+    {
+      "tag": "ug-CN",
+      "name": "ئۇيغۇرچە",
+      "direction": "rtl"
+    },
+    {
+      "tag": "kk-Arab-CN",
+      "name": "قازاقشا",
+      "direction": "rtl"
+    }
+  ],
+  "sourceLocale": "zh-CN",
+  "fallbackLocale": "zh-CN"
+}
