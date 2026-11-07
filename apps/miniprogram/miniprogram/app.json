@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/market/index",
+    "pages/publish/index",
+    "pages/mine/index",
+    "pages/detail/index",
+    "pages/intent/index",
+    "pages/settings/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fbfcf9",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "禾集 HEJI",
+    "backgroundColor": "#fbfcf9"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      { "pagePath": "pages/market/index", "text": "找农机" },
+      { "pagePath": "pages/publish/index", "text": "发布" },
+      { "pagePath": "pages/mine/index", "text": "我的" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index",
+    "listing-card": "/components/listing-card/index"
+  }
+}

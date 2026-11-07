@@ -1,0 +1,6 @@
+<view class="demo-notice {{rtl ? 'rtl' : ''}}">
+  <text class="demo-tag">DEMO {{version}}</text>
+  <text class="notice-text">{{ui.localNotice}}</text>
+  <text wx:if="{{rtl}}" class="draft-text">{{ui.draft}}</text>
+  <view wx:if="{{storageError}}" class="error" role="alert">{{ui.storageError}}</view>
+</view>

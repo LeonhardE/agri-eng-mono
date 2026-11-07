@@ -1,0 +1,30 @@
+.tabs {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  border-top: 1rpx solid #e6eae3;
+  background: #fbfcf9;
+  padding: 12rpx 16rpx calc(12rpx + env(safe-area-inset-bottom));
+}
+.tab {
+  flex: 1;
+  margin: 0 4rpx;
+  padding: 20rpx 8rpx;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  line-height: 1.5;
+  color: #52624f;
+  background: transparent;
+}
+.tab.active {
+  color: white;
+  background: #20523b;
+  font-weight: 700;
+}
+.tabs .tab {
+  width: auto;
+  min-width: 0;
+}

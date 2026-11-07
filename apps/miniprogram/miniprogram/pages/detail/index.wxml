@@ -1,0 +1,13 @@
+<view class="page {{rtl ? 'rtl' : ''}}">
+  <demo-notice ui="{{ui}}" version="{{version}}" rtl="{{rtl}}" storage-error="{{storageError}}" />
+  <block wx:if="{{item}}">
+    <image class="detail-image" src="{{item.image}}" mode="aspectFill" aria-label="{{ui.imageNote}}" /><text class="note">{{ui.imageNote}}</text>
+    <text class="eyebrow">{{item.categoryLabel}} · {{item.mode === 'rent' ? ui.rentBadge : ui.buyBadge}}</text><text class="title">{{item.title}}</text><text class="muted">{{item.subtitle}}</text>
+    <view class="panel"><text class="price ltr">¥{{item.priceText}}</text><text class="muted"> {{item.mode === 'rent' ? ui.perDay : ui.buyBadge}}</text><view class="divider" /><view class="row"><text>{{ui.yearLabel}}</text><text class="ltr">{{item.year}}</text></view><view class="row"><text>{{ui.hoursLabel}}</text><text class="ltr">{{item.hours}} h</text></view><view class="row"><text>{{ui.power}}</text><text>{{item.power}}</text></view><view class="row"><text>{{ui.location}}</text><text>{{item.location}}</text></view></view>
+    <text class="section-title">{{ui.about}}</text><text>{{item.description}}</text>
+    <view class="panel"><text class="block">{{item.farm}}</text><text class="note">{{ui.farmNote}}</text></view>
+    <view wx:if="{{error}}" class="error" role="alert">{{error}}</view>
+    <button class="button secondary favorite-button" bindtap="favorite">{{saved ? ui.unfavorite : ui.favorite}}</button><button class="button intent-button" bindtap="intent">{{ui.intentTitle}}</button><text class="note">{{ui.noTransaction}}</text>
+  </block>
+  <view wx:else class="empty"><text>{{ui.missing}}</text><button class="button" bindtap="back">{{ui.back}}</button></view>
+</view>

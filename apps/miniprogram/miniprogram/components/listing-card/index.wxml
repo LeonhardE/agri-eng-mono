@@ -1,0 +1,18 @@
+<view class="listing-card {{rtl ? 'rtl' : ''}}">
+  <view class="card-image" bindtap="open" role="button" aria-label="{{item.title}}">
+    <image class="card-picture" src="{{item.image}}" mode="aspectFill" lazy-load aria-label="{{ui.imageNote}}" />
+    <text class="mode-badge">{{item.mode === 'rent' ? ui.rentBadge : ui.buyBadge}}</text>
+  </view>
+  <view class="card-body">
+    <view bindtap="open" role="button" aria-label="{{item.title}}">
+      <text class="eyebrow">{{item.categoryLabel}}</text>
+      <text class="card-title">{{item.title}}</text>
+      <text class="muted">{{item.subtitle}}</text>
+      <view class="meta"><text>{{item.location}}</text><text class="ltr">{{item.year}} · {{item.hours}} h</text></view>
+    </view>
+    <view class="row price-row">
+      <view><text class="price ltr">¥{{item.priceText}}</text><text class="small muted"> {{item.mode === 'rent' ? ui.perDay : ui.buyBadge}}</text></view>
+      <button class="favorite {{saved ? 'selected' : ''}}" catchtap="favorite" aria-label="{{saved ? ui.unfavorite : ui.favorite}}">{{saved ? ui.unfavorite : ui.favorite}}</button>
+    </view>
+  </view>
+</view>

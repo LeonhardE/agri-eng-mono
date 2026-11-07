@@ -1,0 +1,11 @@
+{
+  "name": "@heji/miniprogram",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "check": "node scripts/check.cjs && npm test",
+    "compile:local": "node scripts/compile.cjs",
+    "simulator:prepare": "node scripts/prepare-simulator.cjs"
+  }
+}
