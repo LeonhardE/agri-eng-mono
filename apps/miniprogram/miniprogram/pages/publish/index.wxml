@@ -1,0 +1,18 @@
+<view class="page tab-page {{rtl ? 'rtl' : ''}}">
+  <demo-notice ui="{{ui}}" version="{{version}}" rtl="{{rtl}}" storage-error="{{storageError}}" />
+  <text class="title">{{ui.publish}}</text><text class="muted">{{ui.fictionalInput}}</text>
+  <view wx:if="{{saved}}" class="success"><text class="section-title">{{ui.listingSaved}}</text><text class="muted">{{ui.localOnly}}</text><button class="button" bindtap="mine">{{ui.viewMine}}</button><button class="button secondary" bindtap="again">{{ui.publish}}</button></view>
+  <view wx:else>
+    <button class="text-button sample-button" bindtap="sample">{{ui.trySample}}</button>
+    <view class="chips"><button class="chip {{form.mode === 'rent' ? 'active' : ''}}" data-mode="rent" bindtap="mode">{{ui.rent}}</button><button class="chip {{form.mode === 'buy' ? 'active' : ''}}" data-mode="buy" bindtap="mode">{{ui.buy}}</button></view>
+    <label class="field"><text class="field-label">{{ui.name}}</text><input class="input" value="{{form.title}}" data-field="title" bindinput="input" maxlength="80" aria-label="{{ui.name}}" /></label>
+    <view class="field"><text class="field-label">{{ui.category}}</text><picker range="{{categories}}" range-key="label" value="{{categoryIndex}}" bindchange="category" aria-label="{{ui.category}}"><view class="input">{{categories[categoryIndex].label}} ▾</view></picker></view>
+    <label class="field"><text class="field-label">{{form.mode === 'rent' ? ui.priceRent : ui.priceBuy}}</text><input class="input ltr" type="number" value="{{form.price}}" data-field="price" bindinput="input" maxlength="9" aria-label="{{form.mode === 'rent' ? ui.priceRent : ui.priceBuy}}" /></label>
+    <label class="field"><text class="field-label">{{ui.location}}</text><input class="input" value="{{form.location}}" data-field="location" bindinput="input" maxlength="80" aria-label="{{ui.location}}" /></label>
+    <label class="field"><text class="field-label">{{ui.description}}</text><textarea class="input textarea" value="{{form.description}}" data-field="description" bindinput="input" maxlength="1000" aria-label="{{ui.description}}" /></label>
+    <view class="field"><text class="field-label">{{ui.language}}</text><picker range="{{languages}}" range-key="name" value="{{languageIndex}}" bindchange="language" aria-label="{{ui.language}}"><view class="input">{{languages[languageIndex].name}} ▾</view></picker><text class="note">{{ui.fieldDraft}}</text></view>
+    <image class="preview-image" src="/assets/images/{{form.category}}.jpg" mode="aspectFill" aria-label="{{ui.imageNote}}" /><text class="note">{{ui.imageNote}}</text>
+    <view wx:if="{{error}}" class="error" role="alert">{{error}}</view>
+    <button class="button submit-listing" bindtap="submit">{{ui.saveListing}}</button><text class="note">{{ui.localOnly}}</text>
+  </view>
+</view>

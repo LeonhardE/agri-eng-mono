@@ -1,0 +1,19 @@
+<view class="page tab-page {{rtl ? 'rtl' : ''}}">
+  <view class="row header"><text class="brand ltr">禾集 HEJI</text><button class="text-button settings-button" bindtap="settings">{{ui.settings}}</button></view>
+  <demo-notice ui="{{ui}}" version="{{version}}" rtl="{{rtl}}" storage-error="{{storageError}}" />
+  <text class="title">{{ui.mine}}</text><text class="muted">{{ui.localOnly}}</text>
+  <view class="chips"><button class="chip {{section === 'intents' ? 'active' : ''}}" data-id="intents" bindtap="section">{{ui.myIntents}} · {{intents.length}}</button><button class="chip {{section === 'favorites' ? 'active' : ''}}" data-id="favorites" bindtap="section">{{ui.favorites}} · {{favorites.length}}</button><button class="chip {{section === 'listings' ? 'active' : ''}}" data-id="listings" bindtap="section">{{ui.myListings}} · {{listings.length}}</button></view>
+  <view wx:if="{{error}}" class="error" role="alert">{{error}}</view>
+  <block wx:if="{{section === 'intents'}}">
+    <view wx:for="{{intents}}" wx:key="id" class="panel intent-record"><text class="eyebrow">{{ui.myIntents}}</text><text class="section-title">{{item.item.title}}</text><text class="price ltr">¥{{item.totalText}}</text><text class="note">{{item.item.mode === 'rent' ? ui.rent : ui.buy}}</text><text wx:if="{{item.start}}" class="note ltr">{{item.start}} – {{item.end}}</text><text class="note">{{ui.noTransaction}}</text><button class="text-button danger remove-intent" data-id="{{item.id}}" bindtap="removeIntent">{{ui.remove}}</button></view>
+    <view wx:if="{{!intents.length}}" class="empty"><text class="empty-title">{{ui.emptyIntents}}</text><text class="muted">{{ui.noTransaction}}</text><button class="button secondary" bindtap="find">{{ui.find}}</button></view>
+  </block>
+  <block wx:elif="{{section === 'favorites'}}">
+    <listing-card wx:for="{{favorites}}" wx:key="id" item="{{item}}" saved="{{true}}" ui="{{ui}}" rtl="{{rtl}}" bind:open="open" bind:favorite="favorite" />
+    <view wx:if="{{!favorites.length}}" class="empty"><text class="empty-title">{{ui.emptyFavorites}}</text><text class="muted">{{ui.favoriteHint}}</text><button class="button secondary" bindtap="find">{{ui.find}}</button></view>
+  </block>
+  <block wx:else>
+    <view wx:for="{{listings}}" wx:key="id" class="panel local-listing"><text class="eyebrow">{{ui.localListing}}</text><text class="section-title">{{item.title}}</text><text class="price ltr">¥{{item.priceText}}</text><text>{{item.mode === 'rent' ? ui.perDay : ui.buyBadge}}</text><text class="note">{{item.location}}</text><text class="note">{{item.description}}</text><text class="note">{{ui.fieldDraft}}</text><button class="text-button danger" data-id="{{item.id}}" bindtap="removeListing">{{ui.remove}}</button></view>
+    <view wx:if="{{!listings.length}}" class="empty"><text class="empty-title">{{ui.emptyListings}}</text><text class="muted">{{ui.fictionalInput}}</text><button class="button secondary" bindtap="publish">{{ui.publish}}</button></view>
+  </block>
+</view>

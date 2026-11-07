@@ -1,0 +1,3 @@
+<view class="tabs {{rtl ? 'rtl' : ''}}">
+  <button wx:for="{{items}}" wx:key="index" class="tab {{selected === index ? 'active' : ''}}" data-index="{{index}}" bindtap="switchTab" aria-current="{{selected === index ? 'page' : ''}}">{{item}}</button>
+</view>

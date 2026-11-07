@@ -1,0 +1,18 @@
+<view class="page tab-page {{rtl ? 'rtl' : ''}}">
+  <view class="row header"><text class="brand ltr">禾集 HEJI</text><button class="text-button" bindtap="settings">{{ui.languageSettings}}</button></view>
+  <demo-notice ui="{{ui}}" version="{{version}}" rtl="{{rtl}}" storage-error="{{storageError}}" />
+  <view class="hero"><text class="eyebrow">{{ui.hero}}</text><text class="hero-title">{{ui.heroTitle}}</text><text class="muted">{{ui.localDetails}}</text></view>
+  <input class="input search-input" value="{{query}}" placeholder="{{ui.search}}" placeholder-style="color:#52624f" aria-label="{{ui.search}}" bindinput="search" confirm-type="search" maxlength="80" />
+  <view class="row"><button wx:if="{{query}}" class="text-button" bindtap="clearSearch">{{ui.clear}}</button><button class="text-button saved-filter" bindtap="toggleSaved">{{savedOnly ? ui.find : ui.favorites}}</button></view>
+  <view class="chips"><button wx:for="{{categories}}" wx:key="id" class="chip {{category === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectCategory">{{item.label}}</button></view>
+  <view class="chips"><button wx:for="{{modes}}" wx:key="id" class="chip {{mode === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectMode">{{item.label}}</button></view>
+  <view class="row">
+    <picker class="picker" range="{{regions}}" value="{{regionIndex || 0}}" bindchange="selectRegion" aria-label="{{ui.location}}"><view class="input">{{regions[regionIndex || 0]}} ▾</view></picker>
+    <picker class="picker" range="{{sorts}}" range-key="label" value="{{sortIndex || 0}}" bindchange="selectSort" aria-label="{{ui.recommended}}"><view class="input">{{sorts[sortIndex || 0].label}} ▾</view></picker>
+  </view>
+  <text class="note">{{ui.priceNote}}</text>
+  <text class="section-title">{{savedOnly ? ui.favorites : ui.find}} · {{count}}</text>
+  <view wx:if="{{error}}" class="error" role="alert">{{error}}</view>
+  <listing-card wx:for="{{listings}}" wx:key="id" item="{{item}}" saved="{{item.saved}}" ui="{{ui}}" rtl="{{rtl}}" bind:open="open" bind:favorite="favorite" />
+  <view wx:if="{{!listings.length}}" class="empty"><text class="empty-title">{{savedOnly ? ui.emptyFavorites : ui.empty}}</text><text class="muted">{{savedOnly ? ui.favoriteHint : ui.emptyHint}}</text><button class="button secondary" bindtap="clearFilters">{{ui.clearFilters}}</button></view>
+</view>

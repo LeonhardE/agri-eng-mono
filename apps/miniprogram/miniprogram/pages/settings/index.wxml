@@ -1,0 +1,9 @@
+<view class="page {{rtl ? 'rtl' : ''}}">
+  <demo-notice ui="{{ui}}" version="{{version}}" rtl="{{rtl}}" storage-error="{{storageError}}" />
+  <text class="title">{{ui.languageSettings}}</text><text class="muted">{{ui.languageHint}}</text>
+  <view class="panel"><button wx:for="{{languages}}" wx:key="id" class="language-choice {{locale === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="language"><text>{{item.name}}</text><text wx:if="{{locale === item.id}}">✓</text></button></view>
+  <view class="panel"><text class="section-title">{{ui.draft}}</text><text>{{ui.translationNote}}</text><text class="note">{{ui.fieldDraft}}</text></view>
+  <text class="section-title">{{ui.demoTitle}}</text><text class="muted">{{ui.localDetails}}</text><text class="note">{{ui.noTransaction}}</text><text class="note">{{ui.localOnly}}</text><text class="note ltr">{{ui.version}} {{version}}</text>
+  <view wx:if="{{error}}" class="error" role="alert">{{error}}</view>
+  <button class="button secondary reset-button" bindtap="reset">{{ui.reset}}</button><text class="note">{{ui.resetDetails}}</text><button class="button" bindtap="back">{{ui.back}}</button>
+</view>

@@ -1,0 +1,250 @@
+@import './assets/fonts/arabic.wxss';
+
+page {
+  background: #fbfcf9;
+  color: #26382e;
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+view,
+button,
+input,
+textarea,
+picker {
+  box-sizing: border-box;
+}
+button {
+  font: inherit;
+  color: inherit;
+  white-space: normal;
+}
+button::after {
+  border: 0;
+}
+button[disabled] {
+  opacity: 0.55;
+}
+.page {
+  padding: 0 32rpx 64rpx;
+  max-width: 960rpx;
+  margin: 0 auto;
+  overflow-wrap: anywhere;
+}
+.tab-page {
+  padding-bottom: calc(176rpx + env(safe-area-inset-bottom));
+}
+.rtl {
+  direction: rtl;
+  text-align: right;
+  font-family: HEJIArabic, 'PingFang SC', sans-serif;
+}
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+.brand {
+  font-size: 28rpx;
+  font-weight: 700;
+  letter-spacing: 4rpx;
+  color: #20523b;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+}
+.header {
+  padding: 32rpx 0 8rpx;
+}
+.hero {
+  padding: 32rpx;
+  margin: 32rpx 0;
+  background: #f2f4e9;
+  border-radius: 24rpx;
+  border: 1rpx solid #e6eae3;
+}
+.hero-title {
+  display: block;
+  font-size: 44rpx;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 12rpx 0;
+  color: #20523b;
+}
+.title {
+  display: block;
+  font-size: 40rpx;
+  font-weight: 700;
+  margin: 32rpx 0 16rpx;
+  line-height: 1.5;
+}
+.section-title {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 700;
+  margin: 32rpx 0 16rpx;
+}
+.eyebrow {
+  font-size: 24rpx;
+  color: #52624f;
+  letter-spacing: 1rpx;
+}
+.muted {
+  color: #52624f;
+  font-size: 26rpx;
+}
+.small {
+  font-size: 24rpx;
+}
+.block {
+  display: block;
+}
+.price {
+  font-size: 40rpx;
+  color: #20523b;
+  font-weight: 700;
+}
+.button {
+  display: block;
+  margin: 24rpx 0 0;
+  background: #20523b;
+  color: white;
+  padding: 24rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 16rpx;
+  min-height: 88rpx;
+}
+.secondary {
+  color: #20523b;
+  background: #f2f4e9;
+  border: 1rpx solid #d9e0d1;
+}
+.text-button {
+  background: transparent;
+  color: #20523b;
+  padding: 16rpx 0;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 28rpx;
+  text-align: inherit;
+}
+.danger {
+  color: #a13727;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin: 24rpx 0;
+}
+.chip {
+  margin: 0;
+  padding: 16rpx 24rpx;
+  border: 1rpx solid #d9e0d1;
+  border-radius: 32rpx;
+  color: #52624f;
+  background: white;
+  font-size: 26rpx;
+  line-height: 1.6;
+}
+.chip.active {
+  color: white;
+  background: #20523b;
+  border-color: #20523b;
+}
+/* Native v2 buttons otherwise retain their platform default width and auto margins. */
+.chips .chip,
+.page .text-button {
+  width: auto;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.page .button,
+.panel .language-choice {
+  width: 100%;
+}
+.input {
+  display: block;
+  width: 100%;
+  min-height: 96rpx;
+  padding: 20rpx 24rpx;
+  background: white;
+  border: 1rpx solid #b8c4b2;
+  border-radius: 16rpx;
+  color: #26382e;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+.textarea {
+  height: 240rpx;
+}
+.field {
+  display: block;
+  margin: 24rpx 0;
+}
+.field-label {
+  display: block;
+  margin-bottom: 12rpx;
+  font-weight: 600;
+}
+.picker {
+  min-width: 0;
+  flex: 1;
+}
+.panel {
+  padding: 24rpx;
+  border: 1rpx solid #e6eae3;
+  border-radius: 20rpx;
+  background: white;
+  margin: 24rpx 0;
+}
+.note {
+  display: block;
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #52624f;
+}
+.error {
+  padding: 24rpx;
+  background: #fff1e9;
+  border: 1rpx solid #ddbda6;
+  color: #8c3020;
+  border-radius: 16rpx;
+  margin: 24rpx 0;
+}
+.empty {
+  padding: 48rpx 24rpx;
+  border: 1rpx dashed #b8c4b2;
+  border-radius: 24rpx;
+  text-align: center;
+  margin: 32rpx 0;
+}
+.empty-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 16rpx;
+}
+.divider {
+  height: 1rpx;
+  background: #e6eae3;
+  margin: 24rpx 0;
+}
+.success {
+  padding: 32rpx;
+  background: #f2f4e9;
+  border-radius: 24rpx;
+  margin: 32rpx 0;
+}
+@media (min-width: 600px) {
+  .page {
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+  }
+}

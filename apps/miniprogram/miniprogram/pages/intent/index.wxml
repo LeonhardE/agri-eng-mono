@@ -1,0 +1,12 @@
+<view class="page {{rtl ? 'rtl' : ''}}">
+  <demo-notice ui="{{ui}}" version="{{version}}" rtl="{{rtl}}" storage-error="{{storageError}}" />
+  <view wx:if="{{saved}}" class="success"><text class="title">{{ui.intentSaved}}</text><text>{{ui.noTransaction}}</text><text class="note">{{ui.localOnly}}</text><button class="button" bindtap="mine">{{ui.viewMine}}</button><button class="button secondary" bindtap="back">{{ui.back}}</button></view>
+  <block wx:elif="{{item}}">
+    <text class="title">{{ui.intentTitle}}</text><view class="panel"><text class="section-title">{{item.title}}</text><text class="price ltr">¥{{item.priceText}}</text><text>{{item.mode === 'rent' ? ui.perDay : ui.buyBadge}}</text></view>
+    <block wx:if="{{item.mode === 'rent'}}"><text class="note">{{ui.dateHint}}</text><view class="field"><text class="field-label">{{ui.start}}</text><picker mode="date" start="{{today}}" value="{{start || today}}" data-field="start" bindchange="date" aria-label="{{ui.start}}"><view class="input ltr">{{start || ui.start}}</view></picker></view><view class="field"><text class="field-label">{{ui.end}}</text><picker mode="date" start="{{start || today}}" value="{{end || start || today}}" data-field="end" bindchange="date" aria-label="{{ui.end}}"><view class="input ltr">{{end || ui.end}}</view></picker></view></block>
+    <view class="panel"><text class="block">{{ui.reference}}</text><text class="price ltr">{{total ? '¥' + total : '—'}}</text><text wx:if="{{days}}" class="note ltr">{{start}} – {{end}} · {{days}} d</text><text class="note">{{ui.costNote}}</text></view>
+    <text class="note">{{ui.noTransaction}}</text><text class="note">{{ui.localOnly}}</text>
+    <view wx:if="{{error}}" class="error" role="alert">{{error}}</view><button class="button submit-intent" bindtap="submit">{{ui.saveIntent}}</button>
+  </block>
+  <view wx:else class="empty"><text>{{ui.missing}}</text><button class="button" bindtap="back">{{ui.back}}</button></view>
+</view>

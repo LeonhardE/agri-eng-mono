@@ -1,0 +1,72 @@
+.listing-card {
+  margin-bottom: 32rpx;
+  border: 1rpx solid #e6eae3;
+  border-radius: 24rpx;
+  overflow: hidden;
+  background: white;
+}
+.card-image {
+  height: 340rpx;
+  position: relative;
+  background: #f2f4e9;
+}
+.card-picture {
+  width: 100%;
+  height: 100%;
+}
+.mode-badge {
+  position: absolute;
+  top: 24rpx;
+  left: 24rpx;
+  padding: 8rpx 20rpx;
+  border-radius: 24rpx;
+  background: #fbfcf9;
+  color: #20523b;
+  font-size: 24rpx;
+}
+.rtl .mode-badge {
+  left: auto;
+  right: 24rpx;
+}
+.card-body {
+  padding: 24rpx;
+}
+.card-title {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 700;
+  margin: 8rpx 0;
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16rpx;
+  margin: 24rpx 0;
+  font-size: 24rpx;
+  color: #52624f;
+}
+.price-row {
+  border-top: 1rpx solid #e6eae3;
+  padding-top: 16rpx;
+  flex-wrap: wrap;
+}
+.favorite {
+  margin: 0;
+  padding: 8rpx 16rpx;
+  background: #f2f4e9;
+  color: #20523b;
+  font-size: 24rpx;
+  line-height: 1.6;
+  min-height: 72rpx;
+  border-radius: 12rpx;
+}
+.selected {
+  background: #20523b;
+  color: white;
+}
+.card-body .favorite {
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+}

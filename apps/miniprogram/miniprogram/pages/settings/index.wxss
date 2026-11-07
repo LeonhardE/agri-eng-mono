@@ -1,0 +1,17 @@
+.language-choice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  font-family: HEJIArabic, 'PingFang SC', sans-serif;
+  margin: 8rpx 0;
+  padding: 24rpx;
+  border-radius: 12rpx;
+  font-size: 30rpx;
+  line-height: 1.6;
+}
+.language-choice.active {
+  background: #f2f4e9;
+  color: #20523b;
+  font-weight: 700;
+}
