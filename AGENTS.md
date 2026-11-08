@@ -2,7 +2,7 @@
 
 ## Commit conventions
 
-- Use `Xianxin <zxx9808181@gmail.com>` as the author for every commit.
+- Use the current contributor's configured Git `user.name` and `user.email` as the commit author, unless they explicitly specify a different identity for the task. Preserve existing Git identity settings unless the contributor explicitly requests a configuration change.
 - Credit Codex as a collaborator by adding `Co-authored-by: Codex <codex@openai.com>` to every commit message.
 - Follow Conventional Commits 1.0.0 for every commit message.
 - Every commit must include a scope identifying its service or client, such as `feat(web): ...`, `fix(listing): ...`, `feat(identity): ...`, or `feat(miniprogram): ...`.
